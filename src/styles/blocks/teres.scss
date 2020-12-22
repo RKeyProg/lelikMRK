@@ -1,0 +1,102 @@
+.teres__img {
+	position: absolute;
+	overflow: hidden;
+	width: 41.5%;
+	top: 32%;
+	margin-right: rem(60px);
+	height: 56%;
+	border-radius: rem(15px);
+	background: #212121;
+	z-index: $z-screen;
+
+	@include desktop {
+		width: rem(130px);
+		margin-right: rem(40px);
+	}
+
+	&-content {
+		background: #B2EBF2;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		transition: opacity .3s ease;
+
+		&_active {
+			opacity: 1;
+		}
+	}
+}
+
+.teres__tv {
+	height: 82%;
+	align-self: flex-end;
+	position: relative;
+	z-index: $z-tv;
+}
+
+.teres__handle {
+	width: rem(45px);
+	height: rem(45px);
+	top: 35%;
+	margin-left: rem(207px);
+	position: absolute;
+	border-radius: 50%;
+	z-index: $z-handle;
+
+	@include desktop {
+		width: rem(35px);
+		height: rem(35px);
+		top: 37%;
+		margin-left: rem(140px);
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform .5s ease;
+		transform: rotate(0deg);
+
+		&_clicked {
+			transform: rotate(90deg);
+		}
+
+		&_active {
+			background: linear-gradient(to right, #FCD462 20%, #44C4A1 20%, #44C4A1 40%, #27A2DB 40%, #27A2DB 60%, #E56353 60%, #E56353 80%, #EBF0F3 80%);
+		}
+	}
+}
+
+.teres__antennas {
+	position: absolute;
+	width: 16%;
+	height: 20%;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	z-index: $z-antennas;
+
+	&-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transform-origin: 50% 100%;
+		transform: rotate(-60deg);
+		transition: transform .5s ease;
+
+		&_clicked {
+			transform: rotate(0deg);
+		}
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+}

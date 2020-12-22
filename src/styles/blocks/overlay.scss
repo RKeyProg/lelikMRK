@@ -1,0 +1,123 @@
+.overlay {
+    background-color: rgba($color: #000000, $alpha: .6);
+    padding: rem(35px) rem(25px);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: 1;
+}
+
+.overlay__content {
+    position: relative;
+    top: 0;
+    width: 80vw;
+    height: 75vh;
+    background: #fff;
+    border-radius: rem(20px);
+    padding: rem(30px) rem(70px);
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+        width: 85vw;
+        height: 75vh;
+        padding: rem(20px) rem(20px);
+    }
+}
+
+.overlay-content__wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.overlay__character {
+    width: 30%;
+    height: 100%;
+
+    @include desktop {
+        width: 35%;
+    }
+}
+
+.overlay__character-color {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: rem(7px);
+}
+
+.character-color__btn {
+    width: rem(45px);
+    height: rem(45px);
+    border: 4px solid #000;
+    border-radius: 5px;
+
+    &_green {
+        background: #4CE636;
+    }
+
+    &_yellow {
+        background: #EEEE53;
+    }
+
+    &_red {
+        background: #FA1819;
+    }
+
+    &_black {
+        background: #262E31;
+    }
+
+    &_pink {
+        background: #EF63C0;
+    }
+
+    &_brown {
+        background: #80592F;
+    }
+
+    &_blue {
+        background: #4AFDDF;
+    }
+
+    &_darkBlue {
+        background: #2A43D6;
+    }
+
+    &_orange {
+        background: #F08A1E;
+    }
+
+    &_purple {
+        background: #7941C3;
+    }
+
+    &_white {
+        background: #D9E3F1;
+    }
+
+    &_darkGreen {
+        background: #298B41;
+    }
+}
+
+.overlay__btn {
+    width: rem(40px);
+    height: rem(40px);
+    align-self: flex-end;
+    fill: #FF5252;
+
+    &-icon {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

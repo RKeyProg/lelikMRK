@@ -1,0 +1,60 @@
+.footer {
+	width: 100%;
+
+	& .container {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.footer__column {
+	display: flex;
+	flex-direction: column;
+
+	&:last-child {
+		padding-top: rem(10px);
+	}
+}
+
+.footer__title {
+	font-size: rem(30px);
+	color: #212121;
+	letter-spacing: .05em;
+	margin-bottom: rem(20px);
+
+	@include desktop {
+		font-size: rem(24px);
+	}
+}
+
+.footer__contacts {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #757575;
+
+	@include desktop {
+		font-size: rem(14px);
+	}
+}
+
+.footer__phone {
+	letter-spacing: 0.07em;
+}
+
+.footer__copy, .footer__love {
+	color: #757575;
+	font-size: rem(16px);
+
+	@include desktop {
+		font-size: rem(14px);
+	}
+}
+
+.footer__copy {
+	margin-bottom: rem(5px);
+}
+
+.footer__love span {
+	color: #FF5252;
+}

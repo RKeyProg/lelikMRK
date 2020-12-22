@@ -1,0 +1,52 @@
+.pms__phone {
+	height: 100%;
+	fill: #00BCD4;
+}
+
+.pms__game-buttons {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	height: 60%;
+	display: grid;
+	grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
+	grid-gap: rem(5px);
+}
+
+.pms__game-btn {
+	background: #B2EBF2;
+	width: rem(60px);
+	border-radius: rem(15px);
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&_active {
+		background: #FF5252;
+	}
+}
+
+.pms__game-start-btn {
+	position: absolute;
+	bottom: 4.5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #FF5252;
+	width: rem(65px);
+	height: rem(17px);
+	border-radius: rem(10px);
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&_disabled {
+		background: #757575;
+
+		&:hover {
+			cursor: default;
+		}	
+	}
+}

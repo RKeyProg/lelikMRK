@@ -1,0 +1,14 @@
+.btn {
+	padding: rem(10px) rem(20px);
+	background: #FF5252;
+	border-radius: 5px;
+	text-transform: uppercase;
+
+	&_color_light {
+		color: #fff;
+	}
+
+	@include desktop {
+		font-size: rem(12px);
+	}
+}

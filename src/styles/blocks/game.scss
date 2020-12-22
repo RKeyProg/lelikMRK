@@ -1,0 +1,47 @@
+.game {
+	width: 100%;
+	height: rem(300px);
+	display: flex;
+	display: none;
+	opacity: 0;
+	transition: all .5s ease;
+	position: relative;
+
+	@include desktop {
+		height: rem(200px);
+	}
+}
+
+.game__micro {
+	position: relative;
+	justify-content: center;
+	align-items: center;
+}
+
+.game__pipres {
+	margin-top: rem(20px);
+	align-items: center;
+	justify-content: space-between;
+}
+
+.game__evs {
+	flex-direction: column;
+	align-items: center;
+
+	@include desktop {
+		height: rem(250px);
+	}
+}
+
+.game__pms {
+	position: relative;
+	justify-content: center;
+	padding-top: rem(20px);
+	height: rem(320px);
+}
+
+.game__teres {
+	margin-top: 7%;
+	position: relative;
+	justify-content: center;
+}

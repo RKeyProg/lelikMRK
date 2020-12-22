@@ -1,0 +1,45 @@
+.scroll__buttons {
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	transition: all .3s ease;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 50;
+	height: 100vh;
+	width: rem(60px);
+	padding: rem(20px) rem(20px) rem(20px) 0;
+	opacity: 0;
+
+	@include desktop {
+		width: 4vw;
+		padding: rem(15px) rem(5px) rem(15px) 0;
+	}
+}
+
+.scroll__btn {
+	fill: rgba($color: #BDBDBD, $alpha: .3);
+	transition: all .3s ease;
+
+	&:hover {
+		fill: rgba($color: #BDBDBD, $alpha: 1);
+	}
+
+	&_top {
+		transform: rotate(-90deg);
+	}
+
+	&_bottom {
+		transform: rotate(90deg);
+	}
+}
+
+.scroll__btn-icon {
+	width: 100%;
+	height: rem(40px);
+
+	@include desktop {
+		height: 3vw;
+	}
+}

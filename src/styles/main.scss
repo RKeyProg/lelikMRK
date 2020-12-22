@@ -1,0 +1,39 @@
+// function
+
+@function rem($px){
+	@return $px / $base-font-size + 0rem;
+}
+
+// perem
+
+$container-width: 1170px;
+$base-font-size: 14px;
+
+// breackpoints
+
+$desktop-hd: 1800px;
+$desktop: 1200px;
+$tablets: 768px;
+$phones: 480px;
+
+// z-index
+
+$z-container: 5;
+$z-tv: 10;
+$z-antennas: 7;
+$z-screen: 12;
+$z-handle: 15;
+
+// colors
+
+$gold: #DEC377;
+$gray: #E5E5E5;
+$darkText: rgba(0, 0, 0, .8);
+
+// imports
+
+@import "media/media";
+
+@import "layout/base";
+
+@import "./blocks/*.scss";

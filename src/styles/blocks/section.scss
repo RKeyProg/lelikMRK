@@ -1,0 +1,35 @@
+.section {
+	height: 100vh;
+	position: relative;
+}
+
+.section__hero {
+	padding: 5vw 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	@include desktop {
+		padding: 8vw 0;
+	}
+}
+
+.section__specialties {
+	display: flex;
+	align-items: center;
+
+	& .container {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+	}
+}
+
+.section__footer {
+	padding: 10vw 0;
+	display: flex;
+	align-items: flex-end;
+	background: url('./images/footer.png') center bottom / contain no-repeat
+}

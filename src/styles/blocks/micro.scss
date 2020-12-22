@@ -1,0 +1,77 @@
+.micro__motherboard {
+	width: 100%;
+	position: relative;
+	z-index: 2;
+}
+
+.micro__chip {
+	position: relative;
+	z-index: 5;
+	width: 3%;
+	height: 7%;
+	margin-left: -5%;
+
+	@include desktop {
+		left: -10%;
+		top: -5%;
+	}
+
+	&-snap {
+		position: absolute;
+		z-index: 4;
+		width: 4%;
+		height: 7%;
+		top: 39%;
+		left: 31.5%;
+
+		@include desktop {
+			width: 4.3%;
+			height: 1.8vw;
+			top: 38%;
+			left: 30.2%;
+		}
+	}
+	
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.micro__motherboard {
+	width: 45%;
+}
+
+.micro__processor {
+	position: relative;
+	z-index: 5;
+	width: 12%;
+	height: 20%;
+	margin-right: -12%;
+
+	@include desktop {
+		width: 12.2%;
+		height: 25%;
+		left: 5%;
+		top: 5%;
+	}
+
+	&-snap {
+		position: absolute;
+		z-index: 4;
+		top: 45.5%;
+		left: 51%;
+		width: 13%;
+		height: 21%;
+
+		@include desktop {
+			width: 13.2%;
+			height: 5.5vw;
+			top: 45%;
+			left: 51.5%;
+		}
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+}
