@@ -16,7 +16,7 @@
 	}
 
 	& .cls-4 {
-		fill: #FF5252;
+		fill: $accent;
 	}
 }
 
@@ -55,9 +55,14 @@
 	font-weight: bold;
 	transition: opacity .3s ease;
 	color: #212121;
+	margin-bottom: rem(20px);
 
 	@include desktop {
-		font-size: 24px;
+		font-size: rem(24px);
+	}
+
+	@include tablets {
+		font-size: rem(20px);
 	}
 }
 

@@ -24,7 +24,7 @@
 	}
 
 	&_active {
-		background: #FF5252;
+		background: $accent;
 	}
 }
 
@@ -33,7 +33,7 @@
 	bottom: 4.5%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background: #FF5252;
+	background: $accent;
 	width: rem(65px);
 	height: rem(17px);
 	border-radius: rem(10px);
