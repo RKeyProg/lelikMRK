@@ -4,6 +4,7 @@
 	border: 5px solid $accent;
 	border-radius: rem(20px);
 	overflow: hidden;
+	margin-bottom: rem(20px);
 }
 
 .poit__puzzle {
@@ -12,8 +13,31 @@
 	grid-gap: 2px;
 
 	&-block {
-		&:hover {
+		position: relative;
+		overflow: hidden;
+		border-radius: 7px;
+
+		&:not(.poit__puzzle-block_empty):hover {
 			cursor: pointer;
+		}
+
+		& img {
+			pointer-events: none;
+		}
+	}
+
+	&-btn {
+		color: #fff;
+		font-size: rem(16px);
+		font-weight: bold;
+		border-radius: rem(10px);
+
+		&_disabled {
+			background: #757575;
+	
+			&:hover {
+				cursor: default;
+			}	
 		}
 	}
 }

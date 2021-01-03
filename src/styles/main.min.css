@@ -321,6 +321,7 @@ input[type=range]::-ms-track {
   justify-content: center; }
 
 .game__poit {
+  flex-direction: column;
   height: fit-content; }
 
 .header {
@@ -716,14 +717,30 @@ input[type=range]:focus::-ms-fill-upper {
   height: 100%;
   border: 5px solid #FF5252;
   border-radius: 1.42857rem;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 1.42857rem; }
 
 .poit__puzzle {
   display: grid;
   grid-template: repeat(4, 1fr)/repeat(4, 1fr);
   grid-gap: 2px; }
-  .poit__puzzle-block:hover {
-    cursor: pointer; }
+  .poit__puzzle-block {
+    position: relative;
+    overflow: hidden;
+    border-radius: 7px; }
+    .poit__puzzle-block:not(.poit__puzzle-block_empty):hover {
+      cursor: pointer; }
+    .poit__puzzle-block img {
+      pointer-events: none; }
+  .poit__puzzle-btn {
+    color: #fff;
+    font-size: 1.14286rem;
+    font-weight: bold;
+    border-radius: 0.71429rem; }
+    .poit__puzzle-btn_disabled {
+      background: #757575; }
+      .poit__puzzle-btn_disabled:hover {
+        cursor: default; }
 
 .scroll__buttons {
   display: none;
