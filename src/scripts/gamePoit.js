@@ -12,7 +12,7 @@ let mixedPuzzleDataPositionArray = [];
 // перемещка массива из data
 function shuffleArray(array) {
 	let sortedArray = array.slice();
-	sortedArray.sort(() => Math.random() - 0.5);
+	// sortedArray.sort(() => Math.random() - .5);
 
 	return sortedArray;
 }
@@ -150,15 +150,11 @@ function puzzleIsCorrectlyAssembled() {
 }
 
 function isArraysTheSame() {
-	let isCorrect = false;
-
 	for (let i = 0; i < puzzleDataPositionArray.length; i++) {
-		if (puzzleDataPositionArray[i][0] === mixedPuzzleDataPositionArray[i][0] && puzzleDataPositionArray[i][1] === mixedPuzzleDataPositionArray[i][1]) {
-			isCorrect = true;
-		} else {
-			isCorrect = false;
+		if (puzzleDataPositionArray[i][0] !== mixedPuzzleDataPositionArray[i][0] || puzzleDataPositionArray[i][1] !== mixedPuzzleDataPositionArray[i][1]) {
+			return false;
 		}
 	}
 
-	return isCorrect;
+	return true;
 }
