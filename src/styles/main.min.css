@@ -114,6 +114,9 @@ h2 {
   @media screen and (max-width: 1200px) {
     h2 {
       line-height: 2.14286rem; } }
+  @media screen and (max-width: 768px) {
+    h2 {
+      font-size: 1.57143rem; } }
 
 h3 {
   font-size: 1.85714rem;
@@ -317,6 +320,10 @@ input[type=range]::-ms-track {
   position: relative;
   justify-content: center; }
 
+.game__poit {
+  flex-direction: column;
+  height: fit-content; }
+
 .header {
   position: absolute;
   top: 5vw;
@@ -424,8 +431,10 @@ input[type=range]::-ms-track {
   margin-left: -5%; }
   @media screen and (max-width: 1200px) {
     .micro__chip {
-      left: -10%;
-      top: -5%; } }
+      width: 1.3vw;
+      height: 1.6vw;
+      left: -3%;
+      top: -10%; } }
   .micro__chip-snap {
     position: absolute;
     z-index: 4;
@@ -435,10 +444,10 @@ input[type=range]::-ms-track {
     left: 31.5%; }
     @media screen and (max-width: 1200px) {
       .micro__chip-snap {
-        width: 4.3%;
-        height: 1.8vw;
-        top: 38%;
-        left: 30.2%; } }
+        width: 2vw;
+        height: 2.2vw;
+        top: 32%;
+        left: 29.5%; } }
   .micro__chip:hover {
     cursor: pointer; }
 
@@ -453,8 +462,8 @@ input[type=range]::-ms-track {
   margin-right: -12%; }
   @media screen and (max-width: 1200px) {
     .micro__processor {
-      width: 12.2%;
-      height: 25%;
+      width: 5vw;
+      height: 5vw;
       left: 5%;
       top: 5%; } }
   .micro__processor-snap {
@@ -466,10 +475,10 @@ input[type=range]::-ms-track {
     height: 21%; }
     @media screen and (max-width: 1200px) {
       .micro__processor-snap {
-        width: 13.2%;
-        height: 5.5vw;
-        top: 45%;
-        left: 51.5%; } }
+        width: 5.7vw;
+        height: 5.7vw;
+        top: 44%;
+        left: 50%; } }
   .micro__processor:hover {
     cursor: pointer; }
 
@@ -703,6 +712,36 @@ input[type=range]:focus::-ms-fill-upper {
     .pms__game-start-btn_disabled:hover {
       cursor: default; }
 
+.poit__wrapper {
+  width: 100%;
+  height: 100%;
+  border: 5px solid #FF5252;
+  border-radius: 1.42857rem;
+  overflow: hidden;
+  margin-bottom: 1.42857rem; }
+
+.poit__puzzle {
+  display: grid;
+  grid-template: repeat(4, 1fr)/repeat(4, 1fr);
+  grid-gap: 2px; }
+  .poit__puzzle-block {
+    position: relative;
+    overflow: hidden;
+    border-radius: 7px; }
+    .poit__puzzle-block:not(.poit__puzzle-block_empty):hover {
+      cursor: pointer; }
+    .poit__puzzle-block img {
+      pointer-events: none; }
+  .poit__puzzle-btn {
+    color: #fff;
+    font-size: 1.14286rem;
+    font-weight: bold;
+    border-radius: 0.71429rem; }
+    .poit__puzzle-btn_disabled {
+      background: #757575; }
+      .poit__puzzle-btn_disabled:hover {
+        cursor: default; }
+
 .scroll__buttons {
   display: none;
   flex-direction: column;
@@ -811,10 +850,14 @@ input[type=range]:focus::-ms-fill-upper {
   font-size: 2rem;
   font-weight: bold;
   transition: opacity .3s ease;
-  color: #212121; }
+  color: #212121;
+  margin-bottom: 1.42857rem; }
   @media screen and (max-width: 1200px) {
     .specialties__title {
-      font-size: 24px; } }
+      font-size: 1.71429rem; } }
+  @media screen and (max-width: 768px) {
+    .specialties__title {
+      font-size: 1.42857rem; } }
 
 .specialties__games {
   width: 100%; }

@@ -135,6 +135,10 @@ h2 {
   @include desktop {
     line-height: rem(30px);
   }
+
+  @include tablets {
+    font-size: rem(22px);
+  }
 }
 
 h3 {
