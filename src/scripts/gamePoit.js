@@ -12,7 +12,29 @@ let mixedPuzzleDataPositionArray = [];
 // перемещка массива из data
 function shuffleArray(array) {
 	let sortedArray = array.slice();
-	// sortedArray.sort(() => Math.random() - .5);
+
+	for (let i = 0; i < 100; i++) {
+		let dataPosition = [];
+
+		dataPosition.push(sortedArray[15][0]);
+		dataPosition.push(sortedArray[15][1]);
+
+		let colOrRow = Math.floor(Math.random() * 2);
+
+		// только если элемент соседний с пустым блоком
+		let similarColsOrRowsArray = sortedArray.filter(item => {
+			return item[colOrRow] === dataPosition[colOrRow] && (+item[item.length - 1 - colOrRow] + 1 === +dataPosition[dataPosition.length - 1 - colOrRow] || +item[item.length - 1 - colOrRow] - 1 === +dataPosition[dataPosition.length - 1 - colOrRow]);
+		})
+
+		dataPosition = [];
+
+		let direction = Math.floor(Math.random() * similarColsOrRowsArray.length);
+
+		let whereWeGoIndex = sortedArray.indexOf(similarColsOrRowsArray[direction]);
+
+		sortedArray[whereWeGoIndex] = sortedArray[15];
+		sortedArray[15] = similarColsOrRowsArray[direction];
+	}
 
 	return sortedArray;
 }
@@ -44,7 +66,7 @@ puzzleStartButton.click(() => {
 		getPoitDataPosition();
 
 		mixedPuzzleDataPositionArray = shuffleArray(puzzleDataPositionArray);
-	
+
 		settingBlocksPositionsInThePoitGame();
 	}
 })
