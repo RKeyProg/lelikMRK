@@ -283,7 +283,6 @@ input[type=range]::-ms-track {
 .game {
   width: 100%;
   height: 21.42857rem;
-  display: flex;
   display: none;
   opacity: 0;
   transition: all .5s ease;
@@ -801,9 +800,10 @@ input[type=range]:focus::-ms-fill-upper {
     align-content: center; }
 
 .section__footer {
-  padding: 10vw 0;
+  padding: 5vw 0 10vw;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
   background: url("./images/footer.png") center bottom/contain no-repeat; }
 
 .specialties__way {

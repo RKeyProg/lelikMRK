@@ -1,29 +1,31 @@
-$(document).ready(function() {
+$(document).ready(function () {
   startPipresGame();
-}); 
+});
+
+let amplitude = getRandomInt(-225, 225);
+let changesAmplitude = getRandomInt(-225, 225);
+const controller = $('.pipres__controller-input');
 
 function startPipresGame() {
   let canvas = document.getElementById("pipres__canvas");
   let context = canvas.getContext("2d");
-	context.clearRect(0, 0, canvas.width, canvas.height);
-	drawStaticCurves(context, step);
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  drawStaticCurves(context, step);
   drawCurves(context, step);
 
   step += 5;
   window.requestAnimationFrame(startPipresGame);
 }
 
-let amplitude = getRandomInt(-225, 225);
-let changesAmplitude = getRandomInt(-225, 225);
-
-const controller = $('.pipres__controller-input');
-
-controller.change(function() {
+controller.change(function () {
   changesAmplitude = this.value;
   if (amplitude - 10 <= changesAmplitude && changesAmplitude <= amplitude + 10) {
     changesAmplitude = amplitude;
     controller.prop('disabled', true);
     setTimeout(() => {
+      let mrcoins = +localStorage.getItem('mrcoins');
+      mrcoins += 200;
+      localStorage.setItem('mrcoins', mrcoins);
       alert('+200 MRCoins');
     }, 100);
   }

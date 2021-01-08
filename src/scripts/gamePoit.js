@@ -164,6 +164,9 @@ function puzzleIsCorrectlyAssembled() {
 	}
 
 	if (isArraysTheSame()) {
+		let mrcoins = +localStorage.getItem('mrcoins');
+		mrcoins += 200;
+		localStorage.setItem('mrcoins', mrcoins);
 		alert('+200 MRCoins');
 		puzzleIsStart = false;
 		puzzleIsComplited = true;

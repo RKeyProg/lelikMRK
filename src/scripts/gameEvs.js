@@ -69,6 +69,9 @@ function startEvsGame() {
 			coord = "";
 			setTimeout(() => {
 				if (checkCorrectConnection()) {
+					let mrcoins = +localStorage.getItem('mrcoins');
+					mrcoins += 200;
+					localStorage.setItem('mrcoins', mrcoins);
 					alert('+200 MRCoins');
 					isAciveClearButton = false;
 					$('.evs__btn-clear').css('background-color', '#757575')
