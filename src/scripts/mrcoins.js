@@ -8,4 +8,7 @@ $(document).ready(() => {
 	} else if (date - localStorageDate === NaN) {
 		localStorage.setItem('date', date.getTime());
 	}
+
+	const mrcoinsView = $('.personal-balance__number');
+	mrcoinsView.text(localStorage.getItem('mrcoins'));
 })

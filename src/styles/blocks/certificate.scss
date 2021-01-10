@@ -1,0 +1,64 @@
+.certificate__title {
+	font-size: rem(30px);
+	font-weight: 600;
+	margin-bottom: rem(50px);
+}
+
+.certificate__data {
+	width: 100%;
+	margin-bottom: rem(20px);
+}
+
+.certificate__row {
+	display: flex;
+	align-items: center;
+
+	& span {
+		font-size: rem(18px);
+		font-weight: 600;
+		margin-right: 5px;
+	}
+
+	& div {
+		width: 100%;
+		min-height: rem(44px);
+		border-bottom: 1px solid $darkText;
+		margin-bottom: rem(20px);
+		text-align: center;
+		font-size: rem(20px);
+		font-weight: 600;
+		padding: rem(10px) 0;
+		color: $accent;
+	}
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.certificate__specialties {
+	width: 100%;
+	display: flex;
+
+	&-title {
+		font-size: rem(18px);
+		font-weight: 600;
+		margin-right: 5px;
+		margin-bottom: rem(10px);
+	}
+ 
+	&-list {
+		display: flex;
+	}
+
+	& li {
+		margin-right: rem(10px);
+		font-size: rem(18px);
+		font-weight: 600;
+		color: $accent;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

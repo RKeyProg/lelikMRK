@@ -1,5 +1,5 @@
-$(document).ready(function() {
-  startEvsGame();
+$(document).ready(function () {
+	startEvsGame();
 });
 
 const evsColors = {
@@ -56,7 +56,7 @@ function startEvsGame() {
 			coordOutput = [];
 		}
 	})
-	
+
 	$('.evs__input-rect').click(e => {
 		let data = e.target.getAttribute("data-color");
 		let coord = inputRect[data];
@@ -72,6 +72,10 @@ function startEvsGame() {
 					let mrcoins = +localStorage.getItem('mrcoins');
 					mrcoins += 200;
 					localStorage.setItem('mrcoins', mrcoins);
+
+					const mrcoinsView = $('.personal-balance__number');
+					mrcoinsView.text(localStorage.getItem('mrcoins'));
+
 					alert('+200 MRCoins');
 					isAciveClearButton = false;
 					$('.evs__btn-clear').css('background-color', '#757575')
@@ -84,66 +88,66 @@ function startEvsGame() {
 function drawOutput(ctx) {
 	// желтый провод
 	ctx.beginPath();
-	ctx.lineWidth="3";
-	ctx.fillStyle="#EEEE53"
-	ctx.rect(5,5,50,40); 
+	ctx.lineWidth = "3";
+	ctx.fillStyle = "#EEEE53"
+	ctx.rect(5, 5, 50, 40);
 	ctx.fill();
 
 	// желтый провод 2
 	ctx.beginPath();
-	ctx.lineWidth="3";
-	ctx.fillStyle="#EEEE53"
-	ctx.rect(448,205,50,40); 
+	ctx.lineWidth = "3";
+	ctx.fillStyle = "#EEEE53"
+	ctx.rect(448, 205, 50, 40);
 	ctx.fill();
 
 	// красный провод
 	ctx.beginPath();
-	ctx.lineWidth="3";
-	ctx.fillStyle="#FA1819"
-	ctx.rect(5,105,50,40);
+	ctx.lineWidth = "3";
+	ctx.fillStyle = "#FA1819"
+	ctx.rect(5, 105, 50, 40);
 	ctx.fill();
 
 	// красный провод 2
 	ctx.beginPath();
-	ctx.lineWidth="3";
-	ctx.fillStyle="#FA1819"
-	ctx.rect(448,5,50,40);
+	ctx.lineWidth = "3";
+	ctx.fillStyle = "#FA1819"
+	ctx.rect(448, 5, 50, 40);
 	ctx.fill();
 
 	// зеленый провод
 	ctx.beginPath();
-	ctx.lineWidth="3";
-	ctx.fillStyle="#298B41"
-	ctx.rect(5,205,50,40);
+	ctx.lineWidth = "3";
+	ctx.fillStyle = "#298B41"
+	ctx.rect(5, 205, 50, 40);
 	ctx.fill();
 
 	// зеленый провод 2
 	ctx.beginPath();
-	ctx.lineWidth="3";
-	ctx.fillStyle="#298B41"
-	ctx.rect(448,305,50,40);
+	ctx.lineWidth = "3";
+	ctx.fillStyle = "#298B41"
+	ctx.rect(448, 305, 50, 40);
 	ctx.fill();
 
 	// голубой провод
 	ctx.beginPath();
-	ctx.lineWidth="3";
-	ctx.fillStyle="#2A43D6"
-	ctx.rect(5,305,50,40);
+	ctx.lineWidth = "3";
+	ctx.fillStyle = "#2A43D6"
+	ctx.rect(5, 305, 50, 40);
 	ctx.fill();
 
 	// голубой провод 2
 	ctx.beginPath();
-	ctx.lineWidth="3";
-	ctx.fillStyle="#2A43D6"
-	ctx.rect(448,105,50,40);
+	ctx.lineWidth = "3";
+	ctx.fillStyle = "#2A43D6"
+	ctx.rect(448, 105, 50, 40);
 	ctx.fill();
 }
 
 function drawLines(ctx, outputX, outputY, inputX, inputY, color) {
 	ctx.beginPath();
-	ctx.lineWidth="15";
-	ctx.strokeStyle=color;
-	ctx.moveTo(outputX,outputY);
+	ctx.lineWidth = "15";
+	ctx.strokeStyle = color;
+	ctx.moveTo(outputX, outputY);
 	ctx.lineTo(inputX, inputY);
 	ctx.stroke();
 }
@@ -151,8 +155,8 @@ function drawLines(ctx, outputX, outputY, inputX, inputY, color) {
 function checkCorrectConnection() {
 	let isCorrectConnection = false;
 	if (evsConnectionHistory.length == 8) {
-		for(let i = 0; i < evsConnectionHistory.length; i += 2) {
-			if (evsConnectionHistory[i] === evsConnectionHistory[i+1]) {
+		for (let i = 0; i < evsConnectionHistory.length; i += 2) {
+			if (evsConnectionHistory[i] === evsConnectionHistory[i + 1]) {
 				isCorrectConnection = true;
 			} else {
 				isCorrectConnection = false;

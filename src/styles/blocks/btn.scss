@@ -3,6 +3,7 @@
 	background: $accent;
 	border-radius: 5px;
 	text-transform: uppercase;
+	transition: all .3s ease;
 
 	&_color_light {
 		color: #fff;

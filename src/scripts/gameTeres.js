@@ -45,6 +45,10 @@ function teresChangeComplitedStatus() {
 		let mrcoins = +localStorage.getItem('mrcoins');
 		mrcoins += 200;
 		localStorage.setItem('mrcoins', mrcoins);
+
+		const mrcoinsView = $('.personal-balance__number');
+		mrcoinsView.text(localStorage.getItem('mrcoins'));
+
 		alert('+200 MRCoins');
 	}, 500);
 }
