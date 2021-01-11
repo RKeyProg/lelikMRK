@@ -16,27 +16,33 @@ $(document).ready(() => {
 	let gamesComplitedNew = gamesComplited.split(',');
 
 	if (gamesComplitedNew.indexOf('micro') !== -1) {
-		console.log('micro');
+		const game = $('.game__micro');
+		game.addClass('game_complited');
 	}
 
 	if (gamesComplitedNew.indexOf('pipres') !== -1) {
-		console.log('pipres');
+		const game = $('.game__pipres');
+		game.addClass('game_complited');
 	}
 
 	if (gamesComplitedNew.indexOf('teres') !== -1) {
-		console.log('teres');
+		const game = $('.game__teres');
+		game.addClass('game_complited');
 	}
 
 	if (gamesComplitedNew.indexOf('evs') !== -1) {
-		console.log('evs');
+		const game = $('.game__evs');
+		game.addClass('game_complited');
 	}
 
 	if (gamesComplitedNew.indexOf('pms') !== -1) {
-		console.log('pms');
+		const game = $('.game__pms');
+		game.addClass('game_complited');
 	}
 
 	if (gamesComplitedNew.indexOf('poit') !== -1) {
-		console.log('poit');
+		const game = $('.game__poit');
+		game.addClass('game_complited');
 	}
 
 	const mrcoinsView = $('.personal-balance__number');

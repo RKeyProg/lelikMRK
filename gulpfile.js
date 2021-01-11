@@ -69,6 +69,7 @@ task('copy:svg', () => {
 		`${SRC_PATH}/images/icons/tv.svg`,		
 		`${SRC_PATH}/images/icons/handle.svg`,		
 		`${SRC_PATH}/images/icons/Antennas.svg`,		
+		`${SRC_PATH}/images/icons/checkmark.svg`,		
 	])
 	.pipe(dest(`${DIST_PATH}/images/icons`)).pipe(reload({
 			stream: true

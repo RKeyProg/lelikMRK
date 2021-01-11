@@ -420,6 +420,29 @@ input[type=range]::-ms-track {
   @media screen and (max-width: 1200px) {
     .game {
       height: 14.28571rem; } }
+  .game_complited::after {
+    content: '';
+    display: block;
+    width: 110%;
+    height: 110%;
+    z-index: 25;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1.42857rem;
+    background: rgba(189, 189, 189, 0.5); }
+  .game_complited::before {
+    content: '';
+    display: block;
+    z-index: 26;
+    position: absolute;
+    right: -4.28571rem;
+    top: -0.71429rem;
+    transform: translate(-50%, -50%);
+    width: 3.57143rem;
+    height: 3.57143rem;
+    background: url(./images/icons/checkmark.svg) center center/cover no-repeat; }
 
 .game__micro {
   position: relative;
@@ -995,7 +1018,7 @@ input[type=range]:focus::-ms-fill-upper {
   font-weight: bold;
   transition: opacity .3s ease;
   color: #212121;
-  margin-bottom: 1.42857rem; }
+  margin-bottom: 2.85714rem; }
   @media screen and (max-width: 1200px) {
     .specialties__title {
       font-size: 1.71429rem; } }
