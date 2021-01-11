@@ -49,6 +49,11 @@ function teresChangeComplitedStatus() {
 		const mrcoinsView = $('.personal-balance__number');
 		mrcoinsView.text(localStorage.getItem('mrcoins'));
 
+		let gamesComplited = localStorage.getItem('gamesComplited');
+		let gamesComplitedNew = gamesComplited.split(',');
+		gamesComplitedNew.push('teres');
+		localStorage.setItem('gamesComplited', gamesComplitedNew);
+
 		alert('+200 MRCoins');
 	}, 500);
 }

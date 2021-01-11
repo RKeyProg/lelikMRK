@@ -18,6 +18,11 @@ certificationForm.submit(e => {
 })
 
 function setSertigicate(name, surname, specialties) {
+	if (localStorage.getItem('mrcoins') < 1200) {
+		alert('Недостаточно MRCoins. Пройдите все игры и повторите попытку');
+		return;
+	}
+
 	const sertificateName = $('.certificate__name');
 	const sertificateSurname = $('.certificate__surname');
 	const sertificateSpecialties = $('.certificate__specialties-list');

@@ -76,6 +76,11 @@ function startEvsGame() {
 					const mrcoinsView = $('.personal-balance__number');
 					mrcoinsView.text(localStorage.getItem('mrcoins'));
 
+					let gamesComplited = localStorage.getItem('gamesComplited');
+					let gamesComplitedNew = gamesComplited.split(',');
+					gamesComplitedNew.push('evs');
+					localStorage.setItem('gamesComplited', gamesComplitedNew);
+
 					alert('+200 MRCoins');
 					isAciveClearButton = false;
 					$('.evs__btn-clear').css('background-color', '#757575')
