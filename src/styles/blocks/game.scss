@@ -55,10 +55,8 @@
 .game__evs {
 	flex-direction: column;
 	align-items: center;
-
-	@include desktop {
-		height: rem(250px);
-	}
+	height: auto;
+	padding-bottom: rem(15px);
 }
 
 .game__pms {
