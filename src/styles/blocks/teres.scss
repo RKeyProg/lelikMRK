@@ -14,6 +14,11 @@
 		margin-right: rem(40px);
 	}
 
+	@include tablets-max {
+		width: rem(340px);
+		margin-right: rem(100px);
+	}
+
 	&-content {
 		background: #B2EBF2;
 		width: 100%;
@@ -35,6 +40,10 @@
 	align-self: flex-end;
 	position: relative;
 	z-index: $z-tv;
+
+	@include tablets-max {
+		width: 100%;
+	}
 }
 
 .teres__handle {
@@ -51,6 +60,12 @@
 		height: rem(35px);
 		top: 37%;
 		margin-left: rem(140px);
+	}
+
+	@include tablets-max {
+		width: rem(80px);
+		height: rem(80px);
+		margin-left: rem(340px);
 	}
 
 	&:hover {
@@ -98,5 +113,18 @@
 
 	&:hover {
 		cursor: pointer;
+	}
+
+	@include tablets-max {
+		width: 23%;
+		height: 23%;
+		top: -2%;
+	}
+}
+
+.teres__logo-img {
+	@include tablets-max {
+		width: 60%;
+		height: auto;
 	}
 }

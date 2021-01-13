@@ -122,6 +122,8 @@ function changeText(type) {
 }
 
 const puskAnimation = () => {
+	const windowInnerWidth = window.innerWidth;
+
 	return {
 		next() {
 			if (checkPoint < 33) {
@@ -140,11 +142,19 @@ const puskAnimation = () => {
 						'left': `${points[++checkPoint][1]}%`,
 						'top': `${points[checkPoint][0]}%`
 					}, 500);
-					setTimeout(() => {
-						resetCheckAnimExist();
-						changeText('next');
-						changeGame('next');
-					}, 2300);
+					if (windowInnerWidth > 1024) {
+						setTimeout(() => {
+							resetCheckAnimExist();
+							changeText('next');
+							changeGame('next');
+						}, 2300);
+					} else {
+						setTimeout(() => {
+							resetCheckAnimExist();
+							changeText('next');
+							changeGame('next');
+						}, 200);
+					}
 				} else if (checkPoint === 24) {
 					character.stop(true, false).animate({
 						'left': `${points[++checkPoint][1]}%`,
@@ -165,11 +175,19 @@ const puskAnimation = () => {
 						'left': `${points[++checkPoint][1]}%`,
 						'top': `${points[checkPoint][0]}%`
 					}, 500);
-					setTimeout(() => {
-						resetCheckAnimExist();
-						changeText('next');
-						changeGame('next');
-					}, 3300);
+					if (windowInnerWidth > 1024) {
+						setTimeout(() => {
+							resetCheckAnimExist();
+							changeText('next');
+							changeGame('next');
+						}, 3300);
+					} else {
+						setTimeout(() => {
+							resetCheckAnimExist();
+							changeText('next');
+							changeGame('next');
+						}, 200);
+					}
 				} else if (checkPoint === 30) {
 					character.stop(true, false).animate({
 						'left': `${points[++checkPoint][1]}%`,
@@ -181,12 +199,20 @@ const puskAnimation = () => {
 						'left': `${points[++checkPoint][1]}%`,
 						'top': `${points[checkPoint][0]}%`
 					}, 500);
-					setTimeout(() => {
-						resetCheckAnimExist();
-						changeText('next');
-						changeGame('next');
-						wasScroll++;
-					}, 1800);
+					if (windowInnerWidth > 1024) {
+						setTimeout(() => {
+							resetCheckAnimExist();
+							changeText('next');
+							changeGame('next');
+							wasScroll++;
+						}, 1800);
+					} else {
+						setTimeout(() => {
+							resetCheckAnimExist();
+							changeText('next');
+							changeGame('next');
+						}, 200);
+					}
 				} else {
 					character.stop(true, false).animate({
 						'left': `${points[++checkPoint][1]}%`,
@@ -204,11 +230,19 @@ const puskAnimation = () => {
 						'left': `${points[++checkPoint][1]}%`,
 						'top': `${points[checkPoint][0]}%`
 					}, 500);
-					setTimeout(() => {
-						resetCheckAnimExist();
-						changeText('next');
-						changeGame('next');
-					}, 2800);
+					if (windowInnerWidth > 1024) {
+						setTimeout(() => {
+							resetCheckAnimExist();
+							changeText('next');
+							changeGame('next');
+						}, 2800);
+					} else {
+						setTimeout(() => {
+							resetCheckAnimExist();
+							changeText('next');
+							changeGame('next');
+						}, 200);
+					}
 				}
 			}
 		},
@@ -229,11 +263,19 @@ const puskAnimation = () => {
 						'left': `${points[--checkPoint][1]}%`,
 						'top': `${points[checkPoint][0]}%`
 					}, 500);
-					setTimeout(() => {
-						resetCheckAnimExist();
-						changeText('prev');
-						changeGame('prev');
-					}, 2300);
+					if (windowInnerWidth > 1024) {
+						setTimeout(() => {
+							resetCheckAnimExist();
+							changeText('prev');
+							changeGame('prev');
+						}, 2300);
+					} else {
+						setTimeout(() => {
+							resetCheckAnimExist();
+							changeText('prev');
+							changeGame('prev');
+						}, 200);
+					}
 				} else if (checkPoint === 30) {
 					character.stop(true, false).animate({
 						'left': `${points[--checkPoint][1]}%`,
@@ -254,11 +296,19 @@ const puskAnimation = () => {
 						'left': `${points[--checkPoint][1]}%`,
 						'top': `${points[checkPoint][0]}%`
 					}, 500);
-					setTimeout(() => {
-						resetCheckAnimExist();
-						changeText('prev');
-						changeGame('prev');
-					}, 3300);
+					if (windowInnerWidth > 1024) {
+						setTimeout(() => {
+							resetCheckAnimExist();
+							changeText('prev');
+							changeGame('prev');
+						}, 3300);
+					} else {
+						setTimeout(() => {
+							resetCheckAnimExist();
+							changeText('prev');
+							changeGame('prev');
+						}, 200);
+					}
 				} else if (checkPoint === 33) {
 					character.stop(true, false).animate({
 						'left': `${points[--checkPoint][1]}%`,
@@ -270,11 +320,19 @@ const puskAnimation = () => {
 						'left': `${points[--checkPoint][1]}%`,
 						'top': `${points[checkPoint][0]}%`
 					}, 500);
-					setTimeout(() => {
-						resetCheckAnimExist();
-						changeText('prev');
-						changeGame('prev');
-					}, 1800);
+					if (windowInnerWidth > 1024) {
+						setTimeout(() => {
+							resetCheckAnimExist();
+							changeText('prev');
+							changeGame('prev');
+						}, 1800);
+					} else {
+						setTimeout(() => {
+							resetCheckAnimExist();
+							changeText('prev');
+							changeGame('prev');
+						}, 200);
+					}
 				} else {
 					character.stop(true, false).animate({
 						'left': `${points[--checkPoint][1]}%`,
@@ -292,11 +350,19 @@ const puskAnimation = () => {
 						'left': `${points[--checkPoint][1]}%`,
 						'top': `${points[checkPoint][0]}%`
 					}, 500);
-					setTimeout(() => {
-						resetCheckAnimExist();
-						changeText('prev');
-						changeGame('prev');
-					}, 2800);
+					if (windowInnerWidth > 1024) {
+						setTimeout(() => {
+							resetCheckAnimExist();
+							changeText('prev');
+							changeGame('prev');
+						}, 2800);
+					} else {
+						setTimeout(() => {
+							resetCheckAnimExist();
+							changeText('prev');
+							changeGame('prev');
+						}, 200);
+					}
 				}
 			}
 		}

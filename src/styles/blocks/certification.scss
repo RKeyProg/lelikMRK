@@ -2,6 +2,10 @@
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: rem(50px);
+
+	@include tablets-max {
+		flex-direction: column;
+	}
 }
 
 .certification__certificate {
@@ -14,6 +18,11 @@
 	flex-direction: column;
 	align-items: center;
 	color: $darkText;
+
+	@include tablets-max {
+		width: 100%;
+		margin-bottom: rem(20px);
+	}
 }
 
 .certification__form {
@@ -41,6 +50,11 @@
 			border-radius: rem(10px);
 			outline: none;
 			padding: rem(10px) rem(20px);
+
+			@include tablets-max {
+				padding: rem(20px) rem(20px);
+				font-size: rem(24px);
+			}
 		}
 
 		&:hover {
@@ -50,20 +64,30 @@
 
 	&-title {
 		margin-bottom: rem(10px);
+
+		@include tablets-max {
+			margin-bottom: rem(20px);
+			font-size: rem(24px);
+		}
+	}
+
+	@include tablets-max {
+		width: 100%;
+		margin-bottom: rem(20px);
 	}
 }
 
 .certification__form-specialties {
 	display: grid;
 	grid-template: 1fr 1fr / 1fr 1fr 1fr;
-	grid-column-gap: rem(30px);
+	grid-gap: rem(30px);
 	margin-bottom: rem(20px);
 
 	& label {
-
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		margin: 0;
 
 		& input {
 			display: none;
@@ -82,6 +106,10 @@
 
 	& span {
 		font-size: rem(14px);
+
+		@include tablets-max {
+			font-size: rem(22px);
+		}
 	}
 }
 
@@ -100,6 +128,11 @@
 		width: 70%;
 		fill: $accent;
 	}
+
+	@include tablets-max {
+		width: rem(25px);
+		height: rem(25px);
+	}
 }
 
 .certification__form-btn {
@@ -109,5 +142,9 @@
 	&:hover {
 		background: #fff;
 		color: $accent;
+	}
+
+	@include tablets-max {
+		font-size: rem(20px);
 	}
 }

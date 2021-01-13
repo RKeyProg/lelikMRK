@@ -4,6 +4,12 @@
     }    
 }
 
+@mixin tablets-max {
+    @media screen and (max-width: $tablets-max) {
+        @content;
+    }
+}
+
 @mixin tablets {
     @media screen and (max-width: $tablets) {
        @content;         

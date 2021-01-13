@@ -12,6 +12,11 @@
 	display: grid;
 	grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
 	grid-gap: rem(5px);
+
+	@include tablets-max {
+		top: 49%;
+		grid-gap: rem(10px);
+	}
 }
 
 .pms__game-btn {
@@ -25,6 +30,10 @@
 
 	&_active {
 		background: $accent;
+	}
+
+	@include tablets-max {
+		width: rem(95px);
 	}
 }
 
@@ -48,5 +57,11 @@
 		&:hover {
 			cursor: default;
 		}	
+	}
+
+	@include tablets-max {
+		bottom: 3%;
+		width: rem(100px);
+		height: rem(30px);
 	}
 }

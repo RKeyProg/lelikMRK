@@ -16,6 +16,10 @@
 		width: 4vw;
 		padding: rem(15px) rem(5px) rem(15px) 0;
 	}
+
+	@include tablets-max {
+		width: 8vw;
+	}
 }
 
 .scroll__btn {
@@ -41,5 +45,10 @@
 
 	@include desktop {
 		height: 3vw;
+	}
+
+	@include tablets-max {
+		height: 7vw;
+		width: 7vw;
 	}
 }

@@ -7,6 +7,10 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+
+	@include tablets-max {
+		flex-direction: column-reverse;
+	}
 }
 
 .hero__title {
@@ -19,6 +23,12 @@
 	@include desktop {
 		font-size: rem(30px);
 	}
+
+	@include tablets-max {
+		text-align: center;
+		font-size: rem(46px);
+		line-height: rem(50px);
+	}
 }
 
 .hero__subtitle {
@@ -29,10 +39,20 @@
 	@include desktop {
 		font-size: rem(16px);
 	}
+
+	@include tablets-max {
+		text-align: center;
+		font-size: rem(24px);
+		line-height: rem(26px);
+	}
 }
 
 .hero__text {
 	max-width: 50%;
+
+	@include tablets-max {
+		max-width: 70%;
+	}
 }
 
 .hero__character {
@@ -42,5 +62,20 @@
 
 	@include desktop {
 		width: 25%;
+	}
+
+	@include tablets-max {
+		width: auto;
+		margin-bottom: rem(50px);
+	}
+}
+
+.hero__open-overlay {
+	@include tablets-max {
+		margin: 0 auto;
+		display: block;
+		padding: rem(20px) rem(15px);
+		font-size: rem(18px);
+		line-height: rem(20px);
 	}
 }

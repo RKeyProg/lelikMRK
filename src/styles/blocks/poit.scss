@@ -5,6 +5,10 @@
 	border-radius: rem(20px);
 	overflow: hidden;
 	margin-bottom: rem(20px);
+
+	@include tablets-max {
+		margin-bottom: rem(40px);
+	}
 }
 
 .poit__puzzle {
@@ -38,6 +42,11 @@
 			&:hover {
 				cursor: default;
 			}	
+		}
+
+		@include tablets-max {
+			padding: rem(15px) 0;
+			font-size: rem(20px);
 		}
 	}
 }

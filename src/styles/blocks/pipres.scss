@@ -2,6 +2,10 @@
     width: 50%;
     height: 100%;
     transform: rotate(90deg) translateY(-25%);
+
+    @include tablets-max {
+        transform: rotate(90deg);
+    }
 }
 
 .pipres__controller-input {
@@ -11,6 +15,13 @@
 
     @include desktop {
         left: 12%;
+    }
+
+    @include tablets-max {
+        position: absolute;
+        transform: rotate(0deg);
+        bottom: 0;
+        left: 0;
     }
 }
 
@@ -53,8 +64,14 @@ input[type=range]::-webkit-slider-thumb {
     width: 15px;
     margin-top: -5px;
     border-radius: 50%;
-    background:$accent;
+    background: $accent;
     cursor: pointer;
+
+    @include tablets-max {
+        height: 30px;
+        width: 30px;
+        margin-top: -10px;
+    }
 }
 
 
@@ -64,8 +81,14 @@ input[type=range]::-moz-range-thumb {
     width: 15px;
     border-radius: 50%;
     margin-top: -5px;
-    background:$accent;
+    background: $accent;
     cursor: pointer;
+
+    @include tablets-max {
+        height: 30px;
+        width: 30px;
+        margin-top: -10px;
+    }
 }
 
 /* Тоже самое для IE */
@@ -74,8 +97,14 @@ input[type=range]::-ms-thumb {
     width: 15px;
     border-radius: 50%;
     margin-top: -5px;
-    background:$accent;
+    background: $accent;
     cursor: pointer;
+
+    @include tablets-max {
+        height: 30px;
+        width: 30px;
+        margin-top: -10px;
+    }
 }
 
 
@@ -88,6 +117,10 @@ input[type=range]::-webkit-slider-runnable-track {
     cursor: pointer;
     background: #B2EBF2;
     border-radius: 1.3px;
+
+    @include tablets-max {
+        height: 7px;
+    }
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
@@ -100,6 +133,10 @@ input[type=range]::-moz-range-track {
     cursor: pointer;
     background: #B2EBF2;
     border-radius: 1.3px;
+
+    @include tablets-max {
+        height: 7px;
+    }
 }
 
 input[type=range]::-ms-track {
@@ -110,6 +147,10 @@ input[type=range]::-ms-track {
     border-color: transparent;
     border-width: 16px 0;
     color: transparent;
+
+    @include tablets-max {
+        height: 7px;
+    }
 }
 
 input[type=range]::-ms-fill-lower {

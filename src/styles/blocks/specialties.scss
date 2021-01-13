@@ -5,6 +5,10 @@
 	@include desktop {
 		width: 54%;
 	}
+
+	@include tablets-max {
+		display: none;
+	}
 }
 
 .specialties__way-img {
@@ -47,6 +51,10 @@
 	@include desktop {
 		width: 39%;
 	}
+
+	@include tablets-max {
+		width: 80%;
+	}
 }
 
 .specialties__title {
@@ -61,8 +69,9 @@
 		font-size: rem(24px);
 	}
 
-	@include tablets {
-		font-size: rem(20px);
+	@include tablets-max {
+		font-size: rem(36px);
+		line-height: rem(40px);
 	}
 }
 

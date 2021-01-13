@@ -208,6 +208,9 @@ input[type=range]::-ms-track {
   display: flex;
   justify-content: space-between;
   margin-bottom: 3.57143rem; }
+  @media screen and (max-width: 1024px) {
+    .certification {
+      flex-direction: column; } }
 
 .certification__certificate {
   width: calc(100%/2 - 50px);
@@ -219,6 +222,10 @@ input[type=range]::-ms-track {
   flex-direction: column;
   align-items: center;
   color: rgba(0, 0, 0, 0.8); }
+  @media screen and (max-width: 1024px) {
+    .certification__certificate {
+      width: 100%;
+      margin-bottom: 1.42857rem; } }
 
 .certification__form {
   display: flex;
@@ -243,20 +250,33 @@ input[type=range]::-ms-track {
       border-radius: 0.71429rem;
       outline: none;
       padding: 0.71429rem 1.42857rem; }
+      @media screen and (max-width: 1024px) {
+        .certification__form label input {
+          padding: 1.42857rem 1.42857rem;
+          font-size: 1.71429rem; } }
     .certification__form label:hover {
       cursor: pointer; }
   .certification__form-title {
     margin-bottom: 0.71429rem; }
+    @media screen and (max-width: 1024px) {
+      .certification__form-title {
+        margin-bottom: 1.42857rem;
+        font-size: 1.71429rem; } }
+  @media screen and (max-width: 1024px) {
+    .certification__form {
+      width: 100%;
+      margin-bottom: 1.42857rem; } }
 
 .certification__form-specialties {
   display: grid;
   grid-template: 1fr 1fr / 1fr 1fr 1fr;
-  grid-column-gap: 2.14286rem;
+  grid-gap: 2.14286rem;
   margin-bottom: 1.42857rem; }
   .certification__form-specialties label {
     display: flex;
     flex-direction: row;
-    align-items: center; }
+    align-items: center;
+    margin: 0; }
     .certification__form-specialties label input {
       display: none; }
       .certification__form-specialties label input:checked + .certification__form-checkbox .certification__form-checkbox-mark {
@@ -265,6 +285,9 @@ input[type=range]::-ms-track {
       margin-bottom: 0; }
   .certification__form-specialties span {
     font-size: 1rem; }
+    @media screen and (max-width: 1024px) {
+      .certification__form-specialties span {
+        font-size: 1.57143rem; } }
 
 .certification__form-checkbox {
   margin-right: 0.71429rem;
@@ -279,6 +302,10 @@ input[type=range]::-ms-track {
     display: none;
     width: 70%;
     fill: #FF5252; }
+  @media screen and (max-width: 1024px) {
+    .certification__form-checkbox {
+      width: 1.78571rem;
+      height: 1.78571rem; } }
 
 .certification__form-btn {
   border: 2px solid #fff;
@@ -286,17 +313,26 @@ input[type=range]::-ms-track {
   .certification__form-btn:hover {
     background: #fff;
     color: #FF5252; }
+  @media screen and (max-width: 1024px) {
+    .certification__form-btn {
+      font-size: 1.42857rem; } }
 
 .evs__canvas {
   margin-top: 1.42857rem;
   width: 100%;
   height: 100%;
   max-height: 21.42857rem; }
+  @media screen and (max-width: 1024px) {
+    .evs__canvas {
+      max-height: 32.14286rem; } }
 
 .evs__output-wrapper, .evs__input-wrapper {
   position: absolute;
   width: 50%;
   height: 21.42857rem; }
+  @media screen and (max-width: 1024px) {
+    .evs__output-wrapper, .evs__input-wrapper {
+      height: 90%; } }
 
 .evs__output-wrapper {
   left: 0; }
@@ -324,6 +360,9 @@ input[type=range]::-ms-track {
   @media screen and (max-width: 1200px) {
     .evs__output-rect_yellow {
       top: 10%; } }
+  @media screen and (max-width: 1024px) {
+    .evs__output-rect_yellow {
+      top: 5%; } }
 
 .evs__input-rect_yellow {
   top: 58%;
@@ -331,6 +370,9 @@ input[type=range]::-ms-track {
   @media screen and (max-width: 1200px) {
     .evs__input-rect_yellow {
       top: 60%; } }
+  @media screen and (max-width: 1024px) {
+    .evs__input-rect_yellow {
+      top: 53%; } }
 
 .evs__output-rect_red {
   top: 33%;
@@ -338,6 +380,9 @@ input[type=range]::-ms-track {
   @media screen and (max-width: 1200px) {
     .evs__output-rect_red {
       top: 35%; } }
+  @media screen and (max-width: 1024px) {
+    .evs__output-rect_red {
+      top: 29%; } }
 
 .evs__input-rect_red {
   top: 8%;
@@ -345,6 +390,9 @@ input[type=range]::-ms-track {
   @media screen and (max-width: 1200px) {
     .evs__input-rect_red {
       top: 10%; } }
+  @media screen and (max-width: 1024px) {
+    .evs__input-rect_red {
+      top: 5%; } }
 
 .evs__output-rect_green {
   top: 58%;
@@ -352,6 +400,9 @@ input[type=range]::-ms-track {
   @media screen and (max-width: 1200px) {
     .evs__output-rect_green {
       top: 60%; } }
+  @media screen and (max-width: 1024px) {
+    .evs__output-rect_green {
+      top: 53%; } }
 
 .evs__input-rect_green {
   top: 83%;
@@ -359,6 +410,9 @@ input[type=range]::-ms-track {
   @media screen and (max-width: 1200px) {
     .evs__input-rect_green {
       top: 84%; } }
+  @media screen and (max-width: 1024px) {
+    .evs__input-rect_green {
+      top: 78%; } }
 
 .evs__output-rect_blue {
   top: 83%;
@@ -366,6 +420,9 @@ input[type=range]::-ms-track {
   @media screen and (max-width: 1200px) {
     .evs__output-rect_blue {
       top: 84%; } }
+  @media screen and (max-width: 1024px) {
+    .evs__output-rect_blue {
+      top: 78%; } }
 
 .evs__input-rect_blue {
   top: 33%;
@@ -373,9 +430,15 @@ input[type=range]::-ms-track {
   @media screen and (max-width: 1200px) {
     .evs__input-rect_blue {
       top: 35%; } }
+  @media screen and (max-width: 1024px) {
+    .evs__input-rect_blue {
+      top: 29%; } }
 
 .evs__btn-clear {
   color: #fff; }
+
+.evs__btn {
+  font-size: 1.42857rem; }
 
 .footer {
   width: 100%;
@@ -432,6 +495,9 @@ input[type=range]::-ms-track {
   @media screen and (max-width: 1200px) {
     .game {
       height: 14.28571rem; } }
+  @media screen and (max-width: 1024px) {
+    .game {
+      height: 35.71429rem; } }
   .game_complited::after {
     content: '';
     display: block;
@@ -465,6 +531,9 @@ input[type=range]::-ms-track {
   margin-top: 1.42857rem;
   align-items: center;
   justify-content: space-between; }
+  @media screen and (max-width: 1024px) {
+    .game__pipres {
+      justify-content: center; } }
 
 .game__evs {
   flex-direction: column;
@@ -477,6 +546,9 @@ input[type=range]::-ms-track {
   justify-content: center;
   padding-top: 1.42857rem;
   height: 22.85714rem; }
+  @media screen and (max-width: 1024px) {
+    .game__pms {
+      height: 35.71429rem; } }
 
 .game__teres {
   margin-top: 7%;
@@ -541,6 +613,9 @@ input[type=range]::-ms-track {
   display: flex;
   align-items: center;
   justify-content: space-around; }
+  @media screen and (max-width: 1024px) {
+    .hero__info {
+      flex-direction: column-reverse; } }
 
 .hero__title {
   font-size: 2.85714rem;
@@ -551,6 +626,11 @@ input[type=range]::-ms-track {
   @media screen and (max-width: 1200px) {
     .hero__title {
       font-size: 2.14286rem; } }
+  @media screen and (max-width: 1024px) {
+    .hero__title {
+      text-align: center;
+      font-size: 3.28571rem;
+      line-height: 3.57143rem; } }
 
 .hero__subtitle {
   font-size: 1.28571rem;
@@ -559,9 +639,17 @@ input[type=range]::-ms-track {
   @media screen and (max-width: 1200px) {
     .hero__subtitle {
       font-size: 1.14286rem; } }
+  @media screen and (max-width: 1024px) {
+    .hero__subtitle {
+      text-align: center;
+      font-size: 1.71429rem;
+      line-height: 1.85714rem; } }
 
 .hero__text {
   max-width: 50%; }
+  @media screen and (max-width: 1024px) {
+    .hero__text {
+      max-width: 70%; } }
 
 .hero__character {
   width: 20%;
@@ -570,6 +658,18 @@ input[type=range]::-ms-track {
   @media screen and (max-width: 1200px) {
     .hero__character {
       width: 25%; } }
+  @media screen and (max-width: 1024px) {
+    .hero__character {
+      width: auto;
+      margin-bottom: 3.57143rem; } }
+
+@media screen and (max-width: 1024px) {
+  .hero__open-overlay {
+    margin: 0 auto;
+    display: block;
+    padding: 1.42857rem 1.07143rem;
+    font-size: 1.28571rem;
+    line-height: 1.42857rem; } }
 
 .logo__img {
   width: 5rem;
@@ -598,6 +698,10 @@ input[type=range]::-ms-track {
       height: 1.6vw;
       left: -3%;
       top: -10%; } }
+  @media screen and (max-width: 1024px) {
+    .micro__chip {
+      width: 3.3vw;
+      height: 3.6vw; } }
   .micro__chip-snap {
     position: absolute;
     z-index: 4;
@@ -611,11 +715,21 @@ input[type=range]::-ms-track {
         height: 2.2vw;
         top: 32%;
         left: 29.5%; } }
+    @media screen and (max-width: 1024px) {
+      .micro__chip-snap {
+        width: 4.5vw;
+        height: 4.7vw;
+        top: 36%;
+        left: 29%; } }
   .micro__chip:hover {
     cursor: pointer; }
 
 .micro__motherboard {
   width: 45%; }
+  @media screen and (max-width: 1024px) {
+    .micro__motherboard {
+      width: 100%;
+      height: 55%; } }
 
 .micro__processor {
   position: relative;
@@ -629,6 +743,11 @@ input[type=range]::-ms-track {
       height: 5vw;
       left: 5%;
       top: 5%; } }
+  @media screen and (max-width: 1024px) {
+    .micro__processor {
+      width: 10vw;
+      height: 10vw;
+      left: 0; } }
   .micro__processor-snap {
     position: absolute;
     z-index: 4;
@@ -642,6 +761,12 @@ input[type=range]::-ms-track {
         height: 5.7vw;
         top: 44%;
         left: 50%; } }
+    @media screen and (max-width: 1024px) {
+      .micro__processor-snap {
+        width: 10.7vw;
+        height: 10.7vw;
+        top: 46%;
+        left: 51.5%; } }
   .micro__processor:hover {
     cursor: pointer; }
 
@@ -680,6 +805,9 @@ input[type=range]::-ms-track {
   display: flex;
   justify-content: space-around;
   align-items: center; }
+  @media screen and (max-width: 1024px) {
+    .overlay-content__wrapper {
+      flex-direction: column; } }
 
 .overlay__character {
   width: 30%;
@@ -687,12 +815,18 @@ input[type=range]::-ms-track {
   @media screen and (max-width: 1200px) {
     .overlay__character {
       width: 35%; } }
+  @media screen and (max-width: 1024px) {
+    .overlay__character {
+      height: 40%; } }
 
 .overlay__character-color {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template: repeat(3, 1fr)/repeat(3, 1fr);
   grid-gap: 0.5rem; }
+  @media screen and (max-width: 1024px) {
+    .overlay__character-color {
+      grid-template: repeat(2, 1fr)/repeat(4, 1fr);
+      grid-gap: 1.07143rem; } }
 
 .character-color__btn {
   width: 3.21429rem;
@@ -723,6 +857,12 @@ input[type=range]::-ms-track {
     background: #D9E3F1; }
   .character-color__btn_darkGreen {
     background: #298B41; }
+  @media screen and (max-width: 1024px) {
+    .character-color__btn {
+      width: 6.42857rem;
+      height: 6.42857rem;
+      border: 7px solid #000;
+      border-radius: 10px; } }
 
 .overlay__btn {
   width: 2.85714rem;
@@ -733,6 +873,10 @@ input[type=range]::-ms-track {
     width: 100%;
     height: 100%;
     object-fit: cover; }
+  @media screen and (max-width: 1024px) {
+    .overlay__btn {
+      width: 5rem;
+      height: 5rem; } }
 
 .personal-balance {
   font-size: 2rem;
@@ -747,6 +891,9 @@ input[type=range]::-ms-track {
   width: 50%;
   height: 100%;
   transform: rotate(90deg) translateY(-25%); }
+  @media screen and (max-width: 1024px) {
+    .pipres__canvas {
+      transform: rotate(90deg); } }
 
 .pipres__controller-input {
   position: relative;
@@ -755,6 +902,12 @@ input[type=range]::-ms-track {
   @media screen and (max-width: 1200px) {
     .pipres__controller-input {
       left: 12%; } }
+  @media screen and (max-width: 1024px) {
+    .pipres__controller-input {
+      position: absolute;
+      transform: rotate(0deg);
+      bottom: 0;
+      left: 0; } }
 
 input[type=range] {
   -webkit-appearance: none;
@@ -786,6 +939,11 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 50%;
   background: #FF5252;
   cursor: pointer; }
+  @media screen and (max-width: 1024px) {
+    input[type=range]::-webkit-slider-thumb {
+      height: 30px;
+      width: 30px;
+      margin-top: -10px; } }
 
 /* Тоже самое для Firefox */
 input[type=range]::-moz-range-thumb {
@@ -795,6 +953,11 @@ input[type=range]::-moz-range-thumb {
   margin-top: -5px;
   background: #FF5252;
   cursor: pointer; }
+  @media screen and (max-width: 1024px) {
+    input[type=range]::-moz-range-thumb {
+      height: 30px;
+      width: 30px;
+      margin-top: -10px; } }
 
 /* Тоже самое для IE */
 input[type=range]::-ms-thumb {
@@ -804,6 +967,11 @@ input[type=range]::-ms-thumb {
   margin-top: -5px;
   background: #FF5252;
   cursor: pointer; }
+  @media screen and (max-width: 1024px) {
+    input[type=range]::-ms-thumb {
+      height: 30px;
+      width: 30px;
+      margin-top: -10px; } }
 
 input[type=range]::-webkit-slider-runnable-track {
   height: 5px;
@@ -811,6 +979,9 @@ input[type=range]::-webkit-slider-runnable-track {
   cursor: pointer;
   background: #B2EBF2;
   border-radius: 1.3px; }
+  @media screen and (max-width: 1024px) {
+    input[type=range]::-webkit-slider-runnable-track {
+      height: 7px; } }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
   background: #B2EBF2; }
@@ -821,6 +992,9 @@ input[type=range]::-moz-range-track {
   cursor: pointer;
   background: #B2EBF2;
   border-radius: 1.3px; }
+  @media screen and (max-width: 1024px) {
+    input[type=range]::-moz-range-track {
+      height: 7px; } }
 
 input[type=range]::-ms-track {
   height: 5px;
@@ -830,6 +1004,9 @@ input[type=range]::-ms-track {
   border-color: transparent;
   border-width: 16px 0;
   color: transparent; }
+  @media screen and (max-width: 1024px) {
+    input[type=range]::-ms-track {
+      height: 7px; } }
 
 input[type=range]::-ms-fill-lower {
   background: #B2EBF2;
@@ -858,6 +1035,10 @@ input[type=range]:focus::-ms-fill-upper {
   display: grid;
   grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
   grid-gap: 0.35714rem; }
+  @media screen and (max-width: 1024px) {
+    .pms__game-buttons {
+      top: 49%;
+      grid-gap: 0.71429rem; } }
 
 .pms__game-btn {
   background: #B2EBF2;
@@ -867,6 +1048,9 @@ input[type=range]:focus::-ms-fill-upper {
     cursor: pointer; }
   .pms__game-btn_active {
     background: #FF5252; }
+  @media screen and (max-width: 1024px) {
+    .pms__game-btn {
+      width: 6.78571rem; } }
 
 .pms__game-start-btn {
   position: absolute;
@@ -883,6 +1067,11 @@ input[type=range]:focus::-ms-fill-upper {
     background: #757575; }
     .pms__game-start-btn_disabled:hover {
       cursor: default; }
+  @media screen and (max-width: 1024px) {
+    .pms__game-start-btn {
+      bottom: 3%;
+      width: 7.14286rem;
+      height: 2.14286rem; } }
 
 .poit__wrapper {
   width: 100%;
@@ -891,6 +1080,9 @@ input[type=range]:focus::-ms-fill-upper {
   border-radius: 1.42857rem;
   overflow: hidden;
   margin-bottom: 1.42857rem; }
+  @media screen and (max-width: 1024px) {
+    .poit__wrapper {
+      margin-bottom: 2.85714rem; } }
 
 .poit__puzzle {
   display: grid;
@@ -913,6 +1105,10 @@ input[type=range]:focus::-ms-fill-upper {
       background: #757575; }
       .poit__puzzle-btn_disabled:hover {
         cursor: default; }
+    @media screen and (max-width: 1024px) {
+      .poit__puzzle-btn {
+        padding: 1.07143rem 0;
+        font-size: 1.42857rem; } }
 
 .scroll__buttons {
   display: none;
@@ -931,6 +1127,9 @@ input[type=range]:focus::-ms-fill-upper {
     .scroll__buttons {
       width: 4vw;
       padding: 1.07143rem 0.35714rem 1.07143rem 0; } }
+  @media screen and (max-width: 1024px) {
+    .scroll__buttons {
+      width: 8vw; } }
 
 .scroll__btn {
   fill: rgba(189, 189, 189, 0.3);
@@ -948,6 +1147,10 @@ input[type=range]:focus::-ms-fill-upper {
   @media screen and (max-width: 1200px) {
     .scroll__btn-icon {
       height: 3vw; } }
+  @media screen and (max-width: 1024px) {
+    .scroll__btn-icon {
+      height: 7vw;
+      width: 7vw; } }
 
 .section {
   height: 100vh;
@@ -971,6 +1174,9 @@ input[type=range]:focus::-ms-fill-upper {
     display: flex;
     justify-content: space-between;
     align-content: center; }
+    @media screen and (max-width: 1024px) {
+      .section__specialties .container {
+        justify-content: center; } }
 
 .section__footer {
   padding: 5vw 0 10vw;
@@ -990,6 +1196,9 @@ input[type=range]:focus::-ms-fill-upper {
   @media screen and (max-width: 1200px) {
     .specialties__way {
       width: 54%; } }
+  @media screen and (max-width: 1024px) {
+    .specialties__way {
+      display: none; } }
 
 .specialties__way-img {
   width: 100%; }
@@ -1022,6 +1231,9 @@ input[type=range]:focus::-ms-fill-upper {
   @media screen and (max-width: 1200px) {
     .specialties__info {
       width: 39%; } }
+  @media screen and (max-width: 1024px) {
+    .specialties__info {
+      width: 80%; } }
 
 .specialties__title {
   opacity: 1;
@@ -1033,9 +1245,10 @@ input[type=range]:focus::-ms-fill-upper {
   @media screen and (max-width: 1200px) {
     .specialties__title {
       font-size: 1.71429rem; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     .specialties__title {
-      font-size: 1.42857rem; } }
+      font-size: 2.57143rem;
+      line-height: 2.85714rem; } }
 
 .specialties__games {
   width: 100%; }
@@ -1054,6 +1267,10 @@ input[type=range]:focus::-ms-fill-upper {
     .teres__img {
       width: 9.28571rem;
       margin-right: 2.85714rem; } }
+  @media screen and (max-width: 1024px) {
+    .teres__img {
+      width: 24.28571rem;
+      margin-right: 7.14286rem; } }
   .teres__img-content {
     background: #B2EBF2;
     width: 100%;
@@ -1071,6 +1288,9 @@ input[type=range]:focus::-ms-fill-upper {
   align-self: flex-end;
   position: relative;
   z-index: 10; }
+  @media screen and (max-width: 1024px) {
+    .teres__tv {
+      width: 100%; } }
 
 .teres__handle {
   width: 3.21429rem;
@@ -1086,6 +1306,11 @@ input[type=range]:focus::-ms-fill-upper {
       height: 2.5rem;
       top: 37%;
       margin-left: 10rem; } }
+  @media screen and (max-width: 1024px) {
+    .teres__handle {
+      width: 5.71429rem;
+      height: 5.71429rem;
+      margin-left: 24.28571rem; } }
   .teres__handle:hover {
     cursor: pointer; }
   .teres__handle-img {
@@ -1118,3 +1343,13 @@ input[type=range]:focus::-ms-fill-upper {
       transform: rotate(0deg); }
   .teres__antennas:hover {
     cursor: pointer; }
+  @media screen and (max-width: 1024px) {
+    .teres__antennas {
+      width: 23%;
+      height: 23%;
+      top: -2%; } }
+
+@media screen and (max-width: 1024px) {
+  .teres__logo-img {
+    width: 60%;
+    height: auto; } }
