@@ -437,8 +437,9 @@ input[type=range]::-ms-track {
 .evs__btn-clear {
   color: #fff; }
 
-.evs__btn {
-  font-size: 1.42857rem; }
+@media screen and (max-width: 1024px) {
+  .evs__btn {
+    font-size: 1.42857rem; } }
 
 .footer {
   width: 100%;
@@ -1091,7 +1092,9 @@ input[type=range]:focus::-ms-fill-upper {
   .poit__puzzle-block {
     position: relative;
     overflow: hidden;
-    border-radius: 7px; }
+    border-radius: 7px;
+    left: 0;
+    top: 0; }
     .poit__puzzle-block:not(.poit__puzzle-block_empty):hover {
       cursor: pointer; }
     .poit__puzzle-block img {

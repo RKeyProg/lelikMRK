@@ -65,7 +65,7 @@ function drawStaticCurves(ctx, step) {
   let height = ctx.canvas.height;
   ctx.beginPath();
   ctx.lineWidth = 4;
-  ctx.strokeStyle = "rgba(186, 186, 186, .2)";
+  ctx.strokeStyle = "rgba(186, 186, 186, .4)";
 
   let x = 0;
   let y = 0;

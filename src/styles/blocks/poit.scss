@@ -20,6 +20,8 @@
 		position: relative;
 		overflow: hidden;
 		border-radius: 7px;
+		left: 0;
+		top: 0;
 
 		&:not(.poit__puzzle-block_empty):hover {
 			cursor: pointer;

@@ -152,5 +152,8 @@
 }
 
 .evs__btn {
-	font-size: rem(20px);
+
+	@include tablets-max {
+		font-size: rem(20px);
+	}
 }

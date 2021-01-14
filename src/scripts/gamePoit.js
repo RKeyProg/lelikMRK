@@ -95,8 +95,9 @@ function movePazzleElement(block, m, n) {
 		}, 500);
 		setTimeout(() => {
 			$(block).css('top', '0');
+			$(block).css('left', '0');
 			changeGridParameters(block, m, n, emptyM, emptyN);
-		}, 520);
+		}, 530);
 	} else if (m == emptyM && n + 1 == emptyN) {
 		let blockHeight = $(block).height() + 2;
 
@@ -105,8 +106,9 @@ function movePazzleElement(block, m, n) {
 		}, 500);
 		setTimeout(() => {
 			$(block).css('top', '0');
+			$(block).css('left', '0');
 			changeGridParameters(block, m, n, emptyM, emptyN);
-		}, 520);
+		}, 530);
 	} else if (m + 1 == emptyM && n + 1 == emptyN - 1) {
 		let blockHeight = $(block).width() + 2;
 
@@ -114,9 +116,10 @@ function movePazzleElement(block, m, n) {
 			'left': blockHeight,
 		}, 500);
 		setTimeout(() => {
+			$(block).css('top', '0');
 			$(block).css('left', '0');
 			changeGridParameters(block, m, n, emptyM, emptyN);
-		}, 520);
+		}, 530);
 	} else if (m + 1 == emptyM && n == emptyN) {
 		let blockHeight = $(block).width() + 2;
 
@@ -124,13 +127,14 @@ function movePazzleElement(block, m, n) {
 			'left': -blockHeight,
 		}, 500);
 		setTimeout(() => {
+			$(block).css('top', '0');
 			$(block).css('left', '0');
 			changeGridParameters(block, m, n, emptyM, emptyN);
-		}, 520);
+		}, 530);
 	} else {
 		setTimeout(() => {
 			puzzleIsAnimate = false;
-		}, 520);
+		}, 530);
 	}
 }
 
