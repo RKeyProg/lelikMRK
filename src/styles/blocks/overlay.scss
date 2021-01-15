@@ -159,8 +159,8 @@
     }
 
     @include phones {
-        width: rem(40px);
-        height: rem(40px);
+        width: 12vw;
+        height: 12vw;
         border: 3px solid #000;
     }
 }
@@ -187,7 +187,7 @@
         height: rem(55px);
     }
 
-    @include tablets {
+    @include phones {
         width: rem(30px);
         height: rem(30px);
     }
