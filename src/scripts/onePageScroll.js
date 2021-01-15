@@ -15,7 +15,7 @@ const countSectionPosition = sectionEq => {
 	const position = sectionEq * -100;
 
 	if (isNaN(position)) {
-		console.error('передано не верное значение в countSectionPosition');
+		console.error('Передано не верное значение в countSectionPosition');
 		return 0;
 	}
 
@@ -148,10 +148,19 @@ if (isMobile) {
 					const scroller = viewportScroller();
 					let scrollDirection;
 
-					if (direction === "up") scrollDirection = 'next';
-					if (direction === "down") scrollDirection = 'prev';
-
-					scroller[scrollDirection]();
+					if (sectionSpecialties.hasClass('active')) {
+						if ((checkPoint >= 0 && checkPoint < 33 && direction === "up") || (checkPoint <= 33 && checkPoint > 0 && direction === "down")) {
+							sectionSpecialties.addClass('specialites_active');
+						} else if ((checkPoint === 0 && direction === "down") || (checkPoint === 33 && direction === "up")) {
+							sectionSpecialties.removeClass('specialites_active');
+						}
+					}
+				
+					if (!sectionSpecialties.hasClass('specialites_active') && wasScroll !== 0) {
+						if (direction === "up") scrollDirection = 'next';
+						if (direction === "down") scrollDirection = 'prev';
+						scroller[scrollDirection]();
+					}
 			}
 	});
 }
