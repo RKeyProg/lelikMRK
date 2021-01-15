@@ -12,7 +12,10 @@ sections.first().addClass('active');
 let inScroll = false;
 
 const countSectionPosition = sectionEq => {
-	const position = sectionEq * -100;
+	const winHeight = window.innerHeight;
+	console.log(winHeight);
+
+	const position = sectionEq * -winHeight;
 
 	if (isNaN(position)) {
 		console.error('Передано не верное значение в countSectionPosition');
@@ -64,7 +67,7 @@ const perfomTransition = (sectionEq, direction) => {
 	const position = countSectionPosition(sectionEq);
 
 	display.css({
-		transform: `translateY(${position}%)`
+		transform: `translateY(${position}px)`
 	});
 
 	resetActiveClassForItem(sections, sectionEq, 'active');

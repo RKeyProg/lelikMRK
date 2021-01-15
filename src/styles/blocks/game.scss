@@ -91,6 +91,10 @@
 	@include tablets-max {
 		justify-content: center;
 	}
+
+	@include phones {
+		max-height: 250px;
+	}
 }
 
 .game__evs {
