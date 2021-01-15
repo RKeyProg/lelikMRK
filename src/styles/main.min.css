@@ -271,7 +271,7 @@ input[type=range]::-ms-track {
     .certification {
       margin-bottom: 1.42857rem; } }
 
-.certification__certificate {
+.certification__certificate, .certification__certificate_tablets {
   width: calc(100%/2 - 50px);
   height: 100%;
   border: 5px solid #FF5252;
@@ -282,11 +282,12 @@ input[type=range]::-ms-track {
   align-items: center;
   color: rgba(0, 0, 0, 0.8); }
   @media screen and (max-width: 1200px) {
-    .certification__certificate {
+    .certification__certificate, .certification__certificate_tablets {
       width: calc(100%/2 - 20px); } }
-  @media screen and (max-width: 1024px) {
-    .certification__certificate {
-      display: none; } }
+
+@media screen and (max-width: 1024px) {
+  .certification__certificate {
+    display: none; } }
 
 .certification__certificate_tablets {
   height: fit-content;
@@ -710,6 +711,10 @@ input[type=range]::-ms-track {
   align-items: center;
   height: auto;
   padding-bottom: 1.07143rem; }
+  @media screen and (max-width: 1024px) {
+    .game__evs {
+      width: 90%;
+      margin: 0 auto; } }
 
 .game__pms {
   position: relative;

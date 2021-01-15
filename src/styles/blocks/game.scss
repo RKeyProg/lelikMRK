@@ -102,6 +102,11 @@
 	align-items: center;
 	height: auto;
 	padding-bottom: rem(15px);
+
+	@include tablets-max {
+		width: 90%;
+		margin: 0 auto;
+	}
 }
 
 .game__pms {

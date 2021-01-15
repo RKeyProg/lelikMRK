@@ -16,7 +16,7 @@
 	}
 }
 
-.certification__certificate {
+.certification__certificate, .certification__certificate_tablets {
 	width: calc(100%/2 - 50px);
 	height: 100%;
 	border: 5px solid $accent;
@@ -30,7 +30,9 @@
 	@include desktop {
 		width: calc(100%/2 - 20px);
 	}
+}
 
+.certification__certificate {
 	@include tablets-max {
 		display: none;
 	}
