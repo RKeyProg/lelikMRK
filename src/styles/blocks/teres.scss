@@ -19,6 +19,20 @@
 		margin-right: rem(100px);
 	}
 
+	@include tablets {
+		width: 250px;
+		height: 60%;
+		margin-right: 80px;
+		top: 30%;
+	}
+
+	@include phones {
+		width: 210px;
+		height: 55%;
+		margin-right: 65px;
+		top: 32%;
+	}
+
 	&-content {
 		background: #B2EBF2;
 		width: 100%;
@@ -44,6 +58,16 @@
 	@include tablets-max {
 		width: 100%;
 	}
+
+	@include tablets {
+		max-width: 366px;
+		max-height: 320px;
+	}
+
+	@include phones {
+		max-width: 300px;
+		max-height: 320px;
+	}
 }
 
 .teres__handle {
@@ -65,7 +89,21 @@
 	@include tablets-max {
 		width: rem(80px);
 		height: rem(80px);
-		margin-left: rem(340px);
+		margin-left: rem(350px);
+	}
+
+	@include tablets {
+		width: rem(68px);
+		height: rem(68px);
+		top: 35%;
+		margin-left: rem(275px);
+	}
+
+	@include phones {
+		width: rem(60px);
+		height: rem(60px);
+		top: 37%;
+		margin-left: rem(260px);
 	}
 
 	&:hover {
@@ -93,7 +131,7 @@
 	position: absolute;
 	width: 16%;
 	height: 20%;
-	top: 0;
+	top: -5px;
 	left: 50%;
 	transform: translate(-50%, 0);
 	z-index: $z-antennas;
@@ -118,7 +156,19 @@
 	@include tablets-max {
 		width: 23%;
 		height: 23%;
-		top: -2%;
+		top: -4%;
+	}
+
+	@include tablets {
+		width: 120px;
+		height: 120px;
+		top: -12%;
+	}
+
+	@include phones {
+		width: 100px;
+		height: 100px;
+		top: -6%;
 	}
 }
 

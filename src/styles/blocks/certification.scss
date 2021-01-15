@@ -6,6 +6,14 @@
 	@include tablets-max {
 		flex-direction: column;
 	}
+
+	@include tablets {
+		margin-bottom: rem(30px);
+	}
+
+	@include phones {
+		margin-bottom: rem(20px);
+	}
 }
 
 .certification__certificate {
@@ -19,10 +27,19 @@
 	align-items: center;
 	color: $darkText;
 
-	@include tablets-max {
-		width: 100%;
-		margin-bottom: rem(20px);
+	@include desktop {
+		width: calc(100%/2 - 20px);
 	}
+
+	@include tablets-max {
+		display: none;
+	}
+}
+
+.certification__certificate_tablets {
+	height: fit-content;
+	width: 100%;
+	display: flex;
 }
 
 .certification__form {
@@ -55,6 +72,15 @@
 				padding: rem(20px) rem(20px);
 				font-size: rem(24px);
 			}
+
+			@include tablets {
+				padding: rem(15px) rem(15px);
+			}
+
+			@include phones {
+				padding: rem(10px) rem(10px);
+				font-size: rem(12px);
+			}
 		}
 
 		&:hover {
@@ -69,6 +95,19 @@
 			margin-bottom: rem(20px);
 			font-size: rem(24px);
 		}
+
+		@include tablets {
+			font-size: rem(20px);
+		}
+
+		@include phones {
+			font-size: rem(18px);
+			margin-bottom: rem(10px);
+		}
+	}
+
+	@include desktop {
+		width: calc(100%/2 - 20px);
 	}
 
 	@include tablets-max {
@@ -110,6 +149,22 @@
 		@include tablets-max {
 			font-size: rem(22px);
 		}
+
+		@include tablets {
+			font-size: rem(18px);
+		}
+
+		@include phones {
+			font-size: rem(16px);
+		}
+	}
+
+	@include tablets {
+		grid-gap: rem(20px);
+	}
+
+	@include phones {
+		grid-gap: rem(15px);
 	}
 }
 
@@ -133,6 +188,16 @@
 		width: rem(25px);
 		height: rem(25px);
 	}
+
+	@include tablets {
+		width: rem(20px);
+		height: rem(20px);
+	}
+
+	@include phones {
+		width: rem(15px);
+		height: rem(15px);
+	}
 }
 
 .certification__form-btn {
@@ -146,5 +211,13 @@
 
 	@include tablets-max {
 		font-size: rem(20px);
+	}
+
+	@include tablets {
+		font-size: rem(16px);
+	}
+
+	@include phones {
+		font-size: rem(14px);
 	}
 }

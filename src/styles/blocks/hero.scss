@@ -27,7 +27,17 @@
 	@include tablets-max {
 		text-align: center;
 		font-size: rem(46px);
-		line-height: rem(50px);
+		line-height: rem(54px);
+	}
+
+	@include tablets {
+		font-size: rem(30px);
+		line-height: rem(36px);
+	}
+
+	@include phones {
+		font-size: rem(24px);
+		line-height: rem(28px);
 	}
 }
 
@@ -44,6 +54,16 @@
 		text-align: center;
 		font-size: rem(24px);
 		line-height: rem(26px);
+	}
+
+	@include tablets {
+		font-size: rem(18px);
+		line-height: rem(22px);
+	}
+
+	@include phones {
+		font-size: rem(14px);
+		line-height: rem(18px);
 	}
 }
 
@@ -68,6 +88,14 @@
 		width: auto;
 		margin-bottom: rem(50px);
 	}
+
+	@include tablets {
+		height: rem(250px);
+	}
+
+	@include phones {
+		height: rem(150px);
+	}
 }
 
 .hero__open-overlay {
@@ -77,5 +105,15 @@
 		padding: rem(20px) rem(15px);
 		font-size: rem(18px);
 		line-height: rem(20px);
+	}
+
+	@include tablets {
+		padding: rem(15px) rem(15px);
+	}
+
+	@include phones {
+		padding: rem(10px) rem(10px);
+		font-size: rem(16px);
+		line-height: rem(18px);
 	}
 }

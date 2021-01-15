@@ -2,6 +2,11 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+
+	@include phones {
+		flex-direction: column;
+		align-items: center;
+	}
 }
 
 .footer__column {
@@ -10,6 +15,15 @@
 
 	&:last-child {
 		padding-top: rem(10px);
+
+		@include phones {
+			margin-bottom: 0;
+		}
+	}
+
+	@include phones {
+		align-items: center;
+		margin-bottom: rem(20px);
 	}
 }
 
@@ -19,8 +33,13 @@
 	letter-spacing: .05em;
 	margin-bottom: rem(20px);
 
-	@include desktop {
+	@include tablets {
 		font-size: rem(24px);
+	}
+
+	@include phones {
+		font-size: rem(30px);
+		margin-bottom: rem(10px);
 	}
 }
 
@@ -29,23 +48,34 @@
 	justify-content: space-between;
 	align-items: center;
 	color: #757575;
+	font-size: rem(20px);
 
-	@include desktop {
+	@include tablets {
+		font-size: rem(16px);
+	}
+	
+	@include phones {
 		font-size: rem(14px);
 	}
 }
 
 .footer__phone {
 	letter-spacing: 0.07em;
+	margin-right: rem(20px);
 }
 
 .footer__copy, .footer__love {
 	color: #757575;
-	font-size: rem(16px);
+	font-size: rem(22px);
 
 	@include desktop {
+		font-size: rem(20px);
+	}
+
+	@include tablets {
 		font-size: rem(14px);
 	}
+
 }
 
 .footer__copy {

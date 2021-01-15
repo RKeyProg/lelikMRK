@@ -2,6 +2,26 @@
 	font-size: rem(30px);
 	font-weight: 600;
 	margin-bottom: rem(50px);
+
+	@include tablets {
+		margin-bottom: rem(30px);
+	}
+
+	@include tablets {
+		margin-bottom: rem(20px);
+	}
+
+	&_large {
+		font-size: rem(40px);
+
+		@include tablets {
+			font-size: rem(30px);
+		}
+
+		@include phones {
+			font-size: rem(22px);
+		}
+	}
 }
 
 .certificate__data {
@@ -29,10 +49,41 @@
 		font-weight: 600;
 		padding: rem(10px) 0;
 		color: $accent;
+
+		@include tablets {
+			margin-bottom: rem(10px);
+			padding: rem(7px) 0;
+		}
 	}
 	
 	&:last-child {
 		margin-bottom: 0;
+	}
+
+	&_large {
+		& span {
+			font-size: rem(24px);
+
+			@include tablets {
+				font-size: rem(20px);
+			}
+
+			@include phones {
+				font-size: rem(16px);
+			}
+		}
+
+		& div {
+			font-size: rem(24px);
+
+			@include tablets {
+				font-size: rem(20px);
+			}
+
+			@include phones {
+				font-size: rem(16px);
+			}
+		}
 	}
 }
 
@@ -45,10 +96,23 @@
 		font-weight: 600;
 		margin-right: 5px;
 		margin-bottom: rem(10px);
+
+		&_large {
+			font-size: rem(24px);
+
+			@include tablets {
+				font-size: rem(20px);
+			}
+
+			@include phones {
+				font-size: rem(16px);
+			}
+		}
 	}
  
 	&-list {
 		display: flex;
+		flex-wrap: wrap;
 	}
 
 	& li {
@@ -59,6 +123,18 @@
 
 		&:last-child {
 			margin-right: 0;
+		}
+
+		@include tablets-max {
+			font-size: rem(24px);
+		}
+
+		@include tablets {
+			font-size: rem(20px);
+		}
+
+		@include phones {
+			font-size: rem(16px);
 		}
 	}
 }

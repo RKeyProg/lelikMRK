@@ -30,6 +30,27 @@
     }
 }
 
+.overlay-certificate {
+    display: none;
+    position: absolute;
+    top: 200vh;
+    opacity: 0;
+}
+
+.overlay-certificate__content {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay-certificate__btn {
+    margin-top: rem(20px);
+    width: rem(40px);
+    height: rem(40px);
+    align-self: flex-end;
+    fill: $accent;
+}
+
 .overlay-content__wrapper {
     height: 100%;
     width: 100%;
@@ -52,6 +73,10 @@
 
     @include tablets-max {
         height: 40%;
+    }
+
+    @include tablets {
+        width: rem(300px);
     }
 }
 
@@ -126,6 +151,18 @@
         border: 7px solid #000;
         border-radius: 10px;
     } 
+
+    @include tablets {
+        width: rem(75px);
+        height: rem(75px);
+        border: 5px solid #000;
+    }
+
+    @include phones {
+        width: rem(40px);
+        height: rem(40px);
+        border: 3px solid #000;
+    }
 }
 
 .overlay__btn {
@@ -143,5 +180,15 @@
     @include tablets-max {
         width: rem(70px);
         height: rem(70px);
+    }
+
+    @include tablets {
+        width: rem(55px);
+        height: rem(55px);
+    }
+
+    @include tablets {
+        width: rem(30px);
+        height: rem(30px);
     }
 }

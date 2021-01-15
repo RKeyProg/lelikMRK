@@ -30,6 +30,11 @@
 			font-size: rem(16px);
 			max-width: rem(300px);
 		}
+
+		@include tablets-max {
+			font-size: rem(20px);
+			max-width: rem(300px);
+		}
 	}
 
 	&-span_size_small {
@@ -49,13 +54,23 @@
 	& li {
 		margin-right: rem(20px);
 		color: #757575;
+		
+		@include tablets {
+			margin: 0 0 rem(5px) rem(10px);
+		}
 
 		&:last-child {
-			margin-right: 0;
+			margin: 0;
 		}
 	}
 
 	@include desktop {
 		font-size: rem(14px);
+	}
+
+	@include tablets {
+		width: rem(270px);
+		justify-content: flex-end;
+		flex-wrap: wrap;
 	}
 }

@@ -55,6 +55,10 @@
 	@include tablets-max {
 		width: 80%;
 	}
+
+	@include phones {
+		width: 100%;
+	}
 }
 
 .specialties__title {
@@ -72,6 +76,16 @@
 	@include tablets-max {
 		font-size: rem(36px);
 		line-height: rem(40px);
+	}
+
+	@include tablets {
+		font-size: rem(30px);
+		line-height: rem(34px);
+	}
+
+	@include phones {
+		font-size: rem(24px);
+		line-height: rem(28px);
 	}
 }
 

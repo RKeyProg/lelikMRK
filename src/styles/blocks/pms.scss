@@ -1,6 +1,10 @@
 .pms__phone {
 	height: 100%;
 	fill: #00BCD4;
+
+	@include tablets-max {
+		width: 100%;
+	}
 }
 
 .pms__game-buttons {
@@ -14,8 +18,14 @@
 	grid-gap: rem(5px);
 
 	@include tablets-max {
-		top: 49%;
-		grid-gap: rem(10px);
+		top: 48.5%;
+		height: rem(380px);
+		grid-gap: rem(12px);
+	}
+
+	@include phones {
+		height: rem(290px);
+		grid-gap: rem(7px);
 	}
 }
 
@@ -33,7 +43,11 @@
 	}
 
 	@include tablets-max {
-		width: rem(95px);
+		width: rem(115px);
+	}
+
+	@include phones {
+		width: rem(90px);
 	}
 }
 
@@ -60,8 +74,13 @@
 	}
 
 	@include tablets-max {
-		bottom: 3%;
-		width: rem(100px);
+		bottom: 2%;
+		width: rem(120px);
+		height: rem(50px);
+	}
+
+	@include phones {
+		width: rem(90px);
 		height: rem(30px);
 	}
 }

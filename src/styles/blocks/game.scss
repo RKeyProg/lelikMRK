@@ -14,6 +14,14 @@
 		height: rem(500px);
 	}
 
+	@include tablets {
+		height: rem(400px);
+	}
+
+	@include phones {
+		max-height: 400px;
+	}
+
 	&_complited {
 		&::after {
 			content: '';
@@ -48,6 +56,19 @@
 	position: relative;
 	justify-content: center;
 	align-items: center;
+
+	@include tablets-max {
+		width: 584px;
+		margin: 0 auto;
+	}
+
+	@include tablets {
+		width: 366px;
+	}
+
+	@include phones {
+		width: 320px;
+	}
 }
 
 .game__pipres {
@@ -74,7 +95,7 @@
 	height: rem(320px);
 
 	@include tablets-max {
-		height: rem(500px);
+		height: rem(600px);
 	}
 }
 
@@ -86,5 +107,5 @@
 
 .game__poit {
 	flex-direction: column;
-	height: fit-content;
+	height: fit-content !important;
 }

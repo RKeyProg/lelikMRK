@@ -26,7 +26,7 @@ teresHandle.click(e => {
 	}
 })
 
-teresAntennas.click(e => {
+teresAntennasImg.click(e => {
 	if (!teresIsComplited) {
 		teresAntennasImg.toggleClass('teres__antennas-img_clicked');
 

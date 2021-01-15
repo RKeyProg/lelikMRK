@@ -19,8 +19,20 @@
 	}
 
 	@include tablets-max {
-		width: 3.3vw;
-		height: 3.6vw;
+		width: 32px;
+		height: 34px;
+	}
+
+	@include tablets {
+		width: 25px;
+		height: 25px;
+		left: 10%;
+	}
+
+	@include phones {
+		width: 20px;
+		height: 22px;
+		left: 10%;
 	}
 
 	&-snap {
@@ -39,10 +51,24 @@
 		}
 
 		@include tablets-max {
-			width: 4.5vw;
-			height: 4.7vw;
-			top: 36%;
-			left: 29%;
+			width: 36px;
+			height: 38px;
+			top: 186px;
+			left: 133px;
+		}
+
+		@include tablets {
+			width: 30px;
+			height: 34px;
+			top: 137px;
+			left: 60px;
+		}
+
+		@include phones {
+			width: 25px;
+			height: 28px;
+			top: 127px;
+			left: 45px;
 		}
 	}
 
@@ -75,9 +101,21 @@
 	}
 
 	@include tablets-max {
-		width: 10vw;
-		height: 10vw;
+		width: 90px;
+		height: 90px;
 		left: 0;
+	}
+
+	@include tablets {
+		width: 77px;
+		height: 77px;
+		left: -10%;
+	}
+
+	@include phones {
+		width: 72px;
+		height: 72px;
+		left: -10%;
 	}
 
 	&-snap {
@@ -95,12 +133,25 @@
 			left: 50%;
 		}
 
-
 		@include tablets-max {
-			width: 10.7vw;
-			height: 10.7vw;
-			top: 46%;
-			left: 51.5%;
+			width: 100px;
+			height: 100px;
+			top: 236px;
+			left: 307px;
+		}
+
+		@include tablets {
+			width: 82px;
+			height: 82px;
+			top: 170px;
+			left: 185px;
+		}
+
+		@include phones {
+			width: 75px;
+			height: 75px;
+			top: 159px;
+			left: 162px;
 		}
 	}
 
