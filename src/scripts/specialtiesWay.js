@@ -1,5 +1,6 @@
 const character = $('.specialties__way-character');
 const title = $('.specialties__title');
+const subtitle = $('.specialties__subtitle');
 const games = $('.game');
 
 const points = [
@@ -45,7 +46,17 @@ const specialties = [
 	"Электронные вычислительные средства",
 	"Программируемые мобильные системы",
 	"Программное обеспечение информационных технологий",
-]
+];
+
+const instructions = [
+	"Перетащите элементы на свое место",
+	"Настройте амплитуду синей волны по шаблону серой волны",
+	"Включите телевизор и настройте сигнал",
+	"Соедините провода одинакого цвета (Сначала клик по левому проводу, потом по правому)",
+	"Запустите игру нажав на красную кнопку. Запоминайте порядок включения и повторяйте его",
+	"Запустите игру и соберите исходную картинку",
+];
+
 let checkPoint = 0;
 let checkText = 0;
 let checkGame = 0;
@@ -92,31 +103,51 @@ function changeGame(type) {
 function changeText(type) {
 	if (checkText > 5 && type === "next") {
 		title.css('opacity', '0');
+		subtitle.css('opacity', '0');
 		setTimeout(() => {
 			title.text("А всее, специальности закончились");
 			title.css('opacity', '1');
+
+			subtitle.text("");
+			subtitle.css('opacity', '0');
+
 			checkText++;
 		}, 300);
 	} else if (type === "next") {
 		title.css('opacity', '0');
+		subtitle.css('opacity', '0');
 		setTimeout(() => {
 			title.text(specialties[checkText++]);
 			title.css('opacity', '1');
+
+			subtitle.text(instructions[checkText - 1]);
+			subtitle.css('opacity', '1');
+
 		}, 300);
 	}
 
 	if (checkText <= 1 && type === "prev") {
 		title.css('opacity', '0');
+		subtitle.css('opacity', '0');
 		setTimeout(() => {
 			title.text("Хотешь еще раз посмотреть? Крути!");
 			title.css('opacity', '1');
+
+			subtitle.text("");
+			subtitle.css('opacity', '0');
+
 			checkText--;
 		}, 300);
 	} else if (type === "prev") {
 		title.css('opacity', '0');
+		subtitle.css('opacity', '0');
 		setTimeout(() => {
 			title.text(specialties[--checkText - 1]);
 			title.css('opacity', '1');
+
+			subtitle.text(instructions[checkText - 1]);
+			subtitle.css('opacity', '1');
+
 		}, 300);
 	}
 }

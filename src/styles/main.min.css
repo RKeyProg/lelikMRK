@@ -549,6 +549,14 @@ input[type=range]::-ms-track {
   .evs__btn {
     font-size: 1.42857rem; } }
 
+@media screen and (max-width: 768px) {
+  .evs__btn {
+    font-size: 1.14286rem; } }
+
+@media screen and (max-width: 480px) {
+  .evs__btn {
+    font-size: 1rem; } }
+
 .footer {
   width: 100%;
   display: flex;
@@ -648,6 +656,10 @@ input[type=range]::-ms-track {
     transform: translate(-50%, -50%);
     border-radius: 1.42857rem;
     background: rgba(189, 189, 189, 0.5); }
+    @media screen and (max-width: 768px) {
+      .game_complited::after {
+        width: 102%;
+        height: 102%; } }
   .game_complited::before {
     content: '';
     display: block;
@@ -659,6 +671,12 @@ input[type=range]::-ms-track {
     width: 3.57143rem;
     height: 3.57143rem;
     background: url(./images/icons/checkmark.svg) center center/cover no-repeat; }
+    @media screen and (max-width: 768px) {
+      .game_complited::before {
+        width: 2.85714rem;
+        height: 2.85714rem;
+        right: -2.14286rem;
+        top: 0; } }
 
 .game__micro {
   position: relative;
@@ -1589,7 +1607,7 @@ input[type=range]:focus::-ms-fill-upper {
   font-weight: bold;
   transition: opacity .3s ease;
   color: #212121;
-  margin-bottom: 2.85714rem; }
+  margin-bottom: 0.71429rem; }
   @media screen and (max-width: 1200px) {
     .specialties__title {
       font-size: 1.71429rem; } }
@@ -1605,6 +1623,18 @@ input[type=range]:focus::-ms-fill-upper {
     .specialties__title {
       font-size: 1.71429rem;
       line-height: 2rem; } }
+
+.specialties__subtitle {
+  font-size: 1.28571rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 2.85714rem; }
+  @media screen and (max-width: 768px) {
+    .specialties__subtitle {
+      font-size: 1.14286rem; } }
+  @media screen and (max-width: 480px) {
+    .specialties__subtitle {
+      font-size: 1rem; } }
 
 .specialties__games {
   width: 100%; }

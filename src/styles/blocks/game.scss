@@ -35,6 +35,11 @@
 			transform: translate(-50%, -50%);
 			border-radius: rem(20px);
 			background: rgba($color: #bdbdbd, $alpha: .5);
+
+			@include tablets {
+				width: 102%;
+				height: 102%;
+			}
 		}
 
 		&::before {
@@ -48,6 +53,13 @@
 			width: rem(50px);
 			height: rem(50px);
 			background: url(./images/icons/checkmark.svg) center center / cover no-repeat;
+
+			@include tablets {
+				width: rem(40px);
+				height: rem(40px);
+				right: rem(-30px);
+				top: 0;
+			}
 		}
 	}
 }

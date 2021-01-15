@@ -156,4 +156,12 @@
 	@include tablets-max {
 		font-size: rem(20px);
 	}
+
+	@include tablets {
+		font-size: rem(16px);
+	}
+
+	@include phones {
+		font-size: rem(14px);
+	}
 }
