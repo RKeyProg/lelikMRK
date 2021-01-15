@@ -54,7 +54,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: rgba(0, 0, 0, 0.8);
-  background: #fff; }
+  background: #fff;
+  touch-action: none; }
 
 .wrapper {
   width: 100%;

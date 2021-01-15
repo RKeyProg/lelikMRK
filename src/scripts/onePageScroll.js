@@ -13,7 +13,6 @@ let inScroll = false;
 
 const countSectionPosition = sectionEq => {
 	const winHeight = window.innerHeight;
-	console.log(winHeight);
 
 	const position = sectionEq * -winHeight;
 
@@ -132,17 +131,6 @@ $('.scroll__btn').click(e => {
 
 $('.wrapper').on('touchmove', e => e.preventDefault());
 
-$('[data-scroll-to]').on('click', e => {
-    e.preventDefault();
-
-    const $this = $(e.currentTarget);
-
-    const target = $this.attr('data-scroll-to');
-    const reqSection = $(`[data-section-id=${target}]`);
-
-    perfomTransition(reqSection.index());
-})
-
 if (isMobile) {
 	// https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
 
@@ -163,6 +151,13 @@ if (isMobile) {
 						if (direction === "up") scrollDirection = 'next';
 						if (direction === "down") scrollDirection = 'prev';
 						scroller[scrollDirection]();
+					}
+
+					if (sectionSpecialties.hasClass('specialites_active')) {
+						const action = puskAnimation();
+			
+						if (direction === "up" && checkAnimExist === 0) action.next();
+						if (direction === "down" && checkAnimExist === 0) action.prev();
 					}
 			}
 	});
