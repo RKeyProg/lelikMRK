@@ -1472,6 +1472,12 @@ input[type=range]:focus::-ms-fill-upper {
       .poit__puzzle-btn {
         padding: 1.07143rem 0;
         font-size: 1.42857rem; } }
+    @media screen and (max-width: 768px) {
+      .poit__puzzle-btn {
+        font-size: 1.14286rem; } }
+    @media screen and (max-width: 480px) {
+      .poit__puzzle-btn {
+        font-size: 1rem; } }
 
 .scroll__buttons {
   display: none;
