@@ -8,5 +8,7 @@ module.exports = {
     JS_LIBS: [
         'node_modules/jquery/dist/jquery.js',
         'node_modules/jquery-ui-dist/jquery-ui.min.js',
+        'node_modules/jquery-touchswipe/jquery.touchSwipe.js',
+        'node_modules/mobile-detect/mobile-detect.js'
     ]
 }

@@ -4,6 +4,9 @@ const sectionSpecialties = $('.section__specialties');
 
 let wasScroll = 0;
 
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
+
 sections.first().addClass('active');
 
 let inScroll = false;
@@ -123,3 +126,32 @@ $('.scroll__btn').click(e => {
 		scroller.prev();
 	}
 })
+
+$('.wrapper').on('touchmove', e => e.preventDefault());
+
+$('[data-scroll-to]').on('click', e => {
+    e.preventDefault();
+
+    const $this = $(e.currentTarget);
+
+    const target = $this.attr('data-scroll-to');
+    const reqSection = $(`[data-section-id=${target}]`);
+
+    perfomTransition(reqSection.index());
+})
+
+if (isMobile) {
+	// https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+
+	$("body").swipe({
+			swipe: function (event, direction) {
+					const scroller = viewportScroller();
+					let scrollDirection;
+
+					if (direction === "up") scrollDirection = 'next';
+					if (direction === "down") scrollDirection = 'prev';
+
+					scroller[scrollDirection]();
+			}
+	});
+}
