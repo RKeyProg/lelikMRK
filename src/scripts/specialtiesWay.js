@@ -62,6 +62,9 @@ let checkText = 0;
 let checkGame = 0;
 let checkAnimExist = 0;
 
+mobileDetect = new MobileDetect(window.navigator.userAgent);
+isMobile = mobileDetect.mobile();
+
 function resetCheckAnimExist() {
 	checkAnimExist = 0;
 }
@@ -400,6 +403,8 @@ const puskAnimation = () => {
 	};
 }
 
+$('.wrapper').on('touchmove', e => e.preventDefault());
+
 $(window).on('wheel', e => {
 	const deltaY = e.originalEvent.deltaY;
 
@@ -415,3 +420,15 @@ $(window).on('wheel', e => {
 		}
 	}
 })
+
+$("body").swipe({
+	swipe: function (event, direction) {
+		if (sectionSpecialties.hasClass('specialites_active')) {
+			const action = puskAnimation();
+
+			if (direction === "up" && checkAnimExist === 0) action.next();
+			if (direction === "down" && checkAnimExist === 0) action.prev();
+
+		}
+	}
+});
